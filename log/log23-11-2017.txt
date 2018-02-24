@@ -1,0 +1,66 @@
+:::::::::::::::::::::::LOGIN:::::::::::::::::::::::
+[23/11/2017 08:37:31 AM] - SE HA LOGEADO EL USUARIO: nombahia
+:::::::::::::::::::::::LOGIN:::::::::::::::::::::::
+[23/11/2017 11:09:39 AM] - SE HA LOGEADO EL USUARIO: nombahia
+:::::::::::::::::::::::LOGIN:::::::::::::::::::::::
+[23/11/2017 11:47:16 AM] - SE HA LOGEADO EL USUARIO: nombahia
+:::::::::::::::::::::::LOGIN:::::::::::::::::::::::
+[23/11/2017 11:54:14 AM] - SE HA LOGEADO EL USUARIO: nombahia
+:::::::::::::::::::::::LOGIN:::::::::::::::::::::::
+[23/11/2017 12:00:57 PM] - SE HA LOGEADO EL USUARIO: nombahia
+:::::::::::::::::::::::ERROR SQL:::::::::::::::::::::::
+[23/11/2017 12:30:28 PM] - SQLSTATE: 08S01
+[23/11/2017 12:30:28 PM] - CODIGO: -2147467259
+[23/11/2017 12:30:28 PM] - MENSAJE: [Microsoft][ODBC Driver 11 for SQL Server]Communication link failure
+[23/11/2017 12:30:28 PM] - CONSULTA: [dbo].[reporte_checadas_excel_ctro]
+          '20171111',
+          '20171125',
+          '827040110200',
+          '0',
+          '1',
+          '2',
+          'LEFT (L.centro, 10) = LEFT (''827040110200'', 10)',
+          '1',
+          '1',
+          '10',
+          '',
+          '',
+          ''
+          
+:::::::::::::::::::::::ERROR SQL:::::::::::::::::::::::
+[23/11/2017 01:09:41 PM] - SQLSTATE: 08S01
+[23/11/2017 01:09:41 PM] - CODIGO: -2147467259
+[23/11/2017 01:09:41 PM] - MENSAJE: [Microsoft][ODBC Driver 11 for SQL Server]Communication link failure
+[23/11/2017 01:09:41 PM] - CONSULTA: [dbo].[reporte_checadas_excel_ctro]
+          '20171111',
+          '20171125',
+          '827040110900',
+          '0',
+          '1',
+          '2',
+          'LEFT (L.centro, 10) = LEFT (''827040110900'', 10)',
+          '1',
+          '1',
+          '10',
+          '',
+          '',
+          ''
+          
+:::::::::::::::::::::::LOGIN:::::::::::::::::::::::
+[23/11/2017 01:10:00 PM] - SE HA LOGEADO EL USUARIO: SUDO
+:::::::::::::::::::::::LOGIN:::::::::::::::::::::::
+[23/11/2017 01:21:24 PM] - SE HA LOGEADO EL USUARIO: nombahia
+:::::::::::::::::::::::LOGIN:::::::::::::::::::::::
+[23/11/2017 01:23:45 PM] - SE HA LOGEADO EL USUARIO: nombahia
+:::::::::::::::::::::::LOGIN:::::::::::::::::::::::
+[23/11/2017 01:32:58 PM] - SE HA LOGEADO EL USUARIO: angel
+:::::::::::::::::::::::LOGIN:::::::::::::::::::::::
+[23/11/2017 01:34:46 PM] - SE HA LOGEADO EL USUARIO: nombahia
+:::::::::::::::::::::::LOGIN:::::::::::::::::::::::
+[23/11/2017 01:37:58 PM] - SE HA LOGEADO EL USUARIO: nombahia
+:::::::::::::::::::::::LOGIN:::::::::::::::::::::::
+[23/11/2017 01:39:30 PM] - SE HA LOGEADO EL USUARIO: nombahia
+:::::::::::::::::::::::LOGIN:::::::::::::::::::::::
+[23/11/2017 01:43:22 PM] - SE HA LOGEADO EL USUARIO: nombahia
+:::::::::::::::::::::::LOGIN:::::::::::::::::::::::
+[23/11/2017 01:47:45 PM] - SE HA LOGEADO EL USUARIO: nombahia

@@ -1,0 +1,6 @@
+:::::::::::::::::::::::LOGIN:::::::::::::::::::::::
+[04/12/2017 08:50:18 AM] - SE HA LOGEADO EL USUARIO: nombahia
+:::::::::::::::::::::::LOGIN:::::::::::::::::::::::
+[04/12/2017 11:03:45 AM] - SE HA LOGEADO EL USUARIO: nombahia
+:::::::::::::::::::::::LOGIN:::::::::::::::::::::::
+[04/12/2017 12:35:48 PM] - SE HA LOGEADO EL USUARIO: sudo

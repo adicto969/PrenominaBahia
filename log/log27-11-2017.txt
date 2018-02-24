@@ -1,0 +1,21 @@
+:::::::::::::::::::::::LOGIN:::::::::::::::::::::::
+[27/11/2017 11:50:52 AM] - SE HA LOGEADO EL USUARIO: nombahia
+:::::::::::::::::::::::ERROR SQL:::::::::::::::::::::::
+[27/11/2017 01:06:29 PM] - SQLSTATE: 08S01
+[27/11/2017 01:06:29 PM] - CODIGO: -2147467259
+[27/11/2017 01:06:29 PM] - MENSAJE: [Microsoft][ODBC Driver 11 for SQL Server]Communication link failure
+[27/11/2017 01:06:29 PM] - CONSULTA: [dbo].[reporte_checadas_excel_ctro]
+          '20171111',
+          '20171125',
+          '827040510800',
+          '0',
+          '1',
+          '2',
+          'LEFT (L.centro, 10) = LEFT (''827040510800'', 10)',
+          '1',
+          '1',
+          '10',
+          '',
+          '',
+          ''
+          

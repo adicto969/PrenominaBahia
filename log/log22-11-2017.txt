@@ -1,0 +1,575 @@
+:::::::::::::::::::::::LOGIN:::::::::::::::::::::::
+[22/11/2017 12:03:39 AM] - SE HA LOGEADO EL USUARIO: sudo
+:::::::::::::::::::::::LOGIN:::::::::::::::::::::::
+[22/11/2017 09:22:08 AM] - SE HA LOGEADO EL USUARIO: nombahia
+:::::::::::::::::::::::ERROR SQL:::::::::::::::::::::::
+[22/11/2017 09:22:10 AM] - SQLSTATE: 42000
+[22/11/2017 09:22:10 AM] - CODIGO: 156
+[22/11/2017 09:22:10 AM] - MENSAJE: [Microsoft][ODBC Driver 11 for SQL Server][SQL Server]Sintaxis incorrecta cerca de la palabra clave 'ORDER'.
+[22/11/2017 09:22:10 AM] - CONSULTA: 
+  [dbo].[reporte_checadas_excel_ctro]
+  '20171111',
+  '20171125',
+  '827040210400',
+  '0',
+  '1',
+  '3',
+  'LEFT (L.centro, 10) = LEFT (''827040210400'', 10)',
+  '1',
+  '',
+  '',
+  '',
+  'WHERE ROW_NUM BETWEEN ( - 1) *  + 1 AND ( - 1) *  + ',
+  ''
+  
+:::::::::::::::::::::::ERROR SQL:::::::::::::::::::::::
+[22/11/2017 09:22:35 AM] - SQLSTATE: 42000
+[22/11/2017 09:22:35 AM] - CODIGO: 156
+[22/11/2017 09:22:35 AM] - MENSAJE: [Microsoft][ODBC Driver 11 for SQL Server][SQL Server]Sintaxis incorrecta cerca de la palabra clave 'ORDER'.
+[22/11/2017 09:22:35 AM] - CONSULTA: 
+  [dbo].[reporte_checadas_excel_ctro]
+  '20171111',
+  '20171125',
+  '827040210400',
+  '0',
+  '1',
+  '3',
+  'LEFT (L.centro, 10) = LEFT (''827040210400'', 10)',
+  '1',
+  '',
+  '',
+  '',
+  'WHERE ROW_NUM BETWEEN ( - 1) *  + 1 AND ( - 1) *  + ',
+  ''
+  
+:::::::::::::::::::::::ERROR SQL:::::::::::::::::::::::
+[22/11/2017 09:22:44 AM] - SQLSTATE: 42000
+[22/11/2017 09:22:44 AM] - CODIGO: 156
+[22/11/2017 09:22:44 AM] - MENSAJE: [Microsoft][ODBC Driver 11 for SQL Server][SQL Server]Sintaxis incorrecta cerca de la palabra clave 'ORDER'.
+[22/11/2017 09:22:44 AM] - CONSULTA: 
+  [dbo].[reporte_checadas_excel_ctro]
+  '20171111',
+  '20171125',
+  '827040210400',
+  '0',
+  '1',
+  '3',
+  'LEFT (L.centro, 10) = LEFT (''827040210400'', 10)',
+  '1',
+  '',
+  '',
+  '',
+  'WHERE ROW_NUM BETWEEN ( - 1) *  + 1 AND ( - 1) *  + ',
+  ''
+  
+:::::::::::::::::::::::ERROR SQL:::::::::::::::::::::::
+[22/11/2017 09:22:58 AM] - SQLSTATE: 42000
+[22/11/2017 09:22:58 AM] - CODIGO: 156
+[22/11/2017 09:22:58 AM] - MENSAJE: [Microsoft][ODBC Driver 11 for SQL Server][SQL Server]Sintaxis incorrecta cerca de la palabra clave 'ORDER'.
+[22/11/2017 09:22:58 AM] - CONSULTA: 
+  [dbo].[reporte_checadas_excel_ctro]
+  '20171111',
+  '20171125',
+  '827040210400',
+  '0',
+  '1',
+  '3',
+  'LEFT (L.centro, 10) = LEFT (''827040210400'', 10)',
+  '1',
+  '',
+  '',
+  '',
+  'WHERE ROW_NUM BETWEEN ( - 1) *  + 1 AND ( - 1) *  + ',
+  ''
+  
+:::::::::::::::::::::::ERROR SQL:::::::::::::::::::::::
+[22/11/2017 09:23:08 AM] - SQLSTATE: 42000
+[22/11/2017 09:23:08 AM] - CODIGO: 156
+[22/11/2017 09:23:08 AM] - MENSAJE: [Microsoft][ODBC Driver 11 for SQL Server][SQL Server]Sintaxis incorrecta cerca de la palabra clave 'ORDER'.
+[22/11/2017 09:23:08 AM] - CONSULTA: 
+  [dbo].[reporte_checadas_excel_ctro]
+  '20171111',
+  '20171125',
+  '827040210400',
+  '0',
+  '1',
+  '3',
+  'LEFT (L.centro, 10) = LEFT (''827040210400'', 10)',
+  '1',
+  '',
+  '',
+  '',
+  'WHERE ROW_NUM BETWEEN ( - 1) *  + 1 AND ( - 1) *  + ',
+  ''
+  
+:::::::::::::::::::::::ERROR SQL:::::::::::::::::::::::
+[22/11/2017 09:25:18 AM] - SQLSTATE: 42000
+[22/11/2017 09:25:18 AM] - CODIGO: 156
+[22/11/2017 09:25:18 AM] - MENSAJE: [Microsoft][ODBC Driver 11 for SQL Server][SQL Server]Sintaxis incorrecta cerca de la palabra clave 'ORDER'.
+[22/11/2017 09:25:18 AM] - CONSULTA: 
+  [dbo].[reporte_checadas_excel_ctro]
+  '20171111',
+  '20171125',
+  '827040210400',
+  '0',
+  '1',
+  '3',
+  'LEFT (L.centro, 10) = LEFT (''827040210400'', 10)',
+  '1',
+  '',
+  '',
+  '',
+  'WHERE ROW_NUM BETWEEN ( - 1) *  + 1 AND ( - 1) *  + ',
+  ''
+  
+:::::::::::::::::::::::ERROR SQL:::::::::::::::::::::::
+[22/11/2017 09:25:40 AM] - SQLSTATE: 42000
+[22/11/2017 09:25:40 AM] - CODIGO: 156
+[22/11/2017 09:25:40 AM] - MENSAJE: [Microsoft][ODBC Driver 11 for SQL Server][SQL Server]Sintaxis incorrecta cerca de la palabra clave 'ORDER'.
+[22/11/2017 09:25:40 AM] - CONSULTA: 
+  [dbo].[reporte_checadas_excel_ctro]
+  '20171111',
+  '20171125',
+  '827040210400',
+  '0',
+  '1',
+  '3',
+  'LEFT (L.centro, 10) = LEFT (''827040210400'', 10)',
+  '1',
+  '',
+  '',
+  '',
+  'WHERE ROW_NUM BETWEEN ( - 1) *  + 1 AND ( - 1) *  + ',
+  ''
+  
+:::::::::::::::::::::::ERROR SQL:::::::::::::::::::::::
+[22/11/2017 09:26:23 AM] - SQLSTATE: 42000
+[22/11/2017 09:26:23 AM] - CODIGO: 156
+[22/11/2017 09:26:23 AM] - MENSAJE: [Microsoft][ODBC Driver 11 for SQL Server][SQL Server]Sintaxis incorrecta cerca de la palabra clave 'ORDER'.
+[22/11/2017 09:26:23 AM] - CONSULTA: 
+  [dbo].[reporte_checadas_excel_ctro]
+  '20171111',
+  '20171125',
+  '827040210400',
+  '0',
+  '1',
+  '3',
+  'LEFT (L.centro, 10) = LEFT (''827040210400'', 10)',
+  '1',
+  '',
+  '',
+  '',
+  'WHERE ROW_NUM BETWEEN ( - 1) *  + 1 AND ( - 1) *  + ',
+  ''
+  
+:::::::::::::::::::::::ERROR SQL:::::::::::::::::::::::
+[22/11/2017 09:27:16 AM] - SQLSTATE: 42000
+[22/11/2017 09:27:16 AM] - CODIGO: 156
+[22/11/2017 09:27:16 AM] - MENSAJE: [Microsoft][ODBC Driver 11 for SQL Server][SQL Server]Sintaxis incorrecta cerca de la palabra clave 'ORDER'.
+[22/11/2017 09:27:16 AM] - CONSULTA: 
+  [dbo].[reporte_checadas_excel_ctro]
+  '20171111',
+  '20171125',
+  '827040210400',
+  '0',
+  '1',
+  '3',
+  'LEFT (L.centro, 10) = LEFT (''827040210400'', 10)',
+  '1',
+  '',
+  '',
+  '',
+  'WHERE ROW_NUM BETWEEN ( - 1) *  + 1 AND ( - 1) *  + ',
+  ''
+  
+:::::::::::::::::::::::ERROR SQL:::::::::::::::::::::::
+[22/11/2017 09:27:21 AM] - SQLSTATE: 42000
+[22/11/2017 09:27:21 AM] - CODIGO: 156
+[22/11/2017 09:27:21 AM] - MENSAJE: [Microsoft][ODBC Driver 11 for SQL Server][SQL Server]Sintaxis incorrecta cerca de la palabra clave 'ORDER'.
+[22/11/2017 09:27:21 AM] - CONSULTA: 
+  [dbo].[reporte_checadas_excel_ctro]
+  '20171111',
+  '20171125',
+  '827040210400',
+  '0',
+  '1',
+  '3',
+  'LEFT (L.centro, 10) = LEFT (''827040210400'', 10)',
+  '1',
+  '',
+  '',
+  '',
+  'WHERE ROW_NUM BETWEEN ( - 1) *  + 1 AND ( - 1) *  + ',
+  ''
+  
+:::::::::::::::::::::::LOGIN:::::::::::::::::::::::
+[22/11/2017 09:28:40 AM] - SE HA LOGEADO EL USUARIO: nombahia
+:::::::::::::::::::::::ERROR SQL:::::::::::::::::::::::
+[22/11/2017 09:28:42 AM] - SQLSTATE: 42000
+[22/11/2017 09:28:42 AM] - CODIGO: 156
+[22/11/2017 09:28:42 AM] - MENSAJE: [Microsoft][ODBC Driver 11 for SQL Server][SQL Server]Sintaxis incorrecta cerca de la palabra clave 'ORDER'.
+[22/11/2017 09:28:42 AM] - CONSULTA: 
+  [dbo].[reporte_checadas_excel_ctro]
+  '20171111',
+  '20171125',
+  '827040210400',
+  '0',
+  '1',
+  '3',
+  'LEFT (L.centro, 10) = LEFT (''827040210400'', 10)',
+  '1',
+  '',
+  '',
+  '',
+  'WHERE ROW_NUM BETWEEN ( - 1) *  + 1 AND ( - 1) *  + ',
+  ''
+  
+:::::::::::::::::::::::LOGIN:::::::::::::::::::::::
+[22/11/2017 09:53:41 AM] - SE HA LOGEADO EL USUARIO: nombahia
+:::::::::::::::::::::::ERROR SQL:::::::::::::::::::::::
+[22/11/2017 09:53:48 AM] - SQLSTATE: 42000
+[22/11/2017 09:53:48 AM] - CODIGO: 156
+[22/11/2017 09:53:48 AM] - MENSAJE: [Microsoft][ODBC Driver 11 for SQL Server][SQL Server]Sintaxis incorrecta cerca de la palabra clave 'ORDER'.
+[22/11/2017 09:53:48 AM] - CONSULTA: 
+  [dbo].[reporte_checadas_excel_ctro]
+  '20171111',
+  '20171125',
+  '827040210400',
+  '0',
+  '1',
+  '3',
+  'LEFT (L.centro, 10) = LEFT (''827040210400'', 10)',
+  '1',
+  '',
+  '',
+  '',
+  'WHERE ROW_NUM BETWEEN ( - 1) *  + 1 AND ( - 1) *  + ',
+  ''
+  
+:::::::::::::::::::::::LOGIN:::::::::::::::::::::::
+[22/11/2017 09:56:24 AM] - SE HA LOGEADO EL USUARIO: nombahia
+:::::::::::::::::::::::ERROR SQL:::::::::::::::::::::::
+[22/11/2017 09:56:25 AM] - SQLSTATE: 42000
+[22/11/2017 09:56:25 AM] - CODIGO: 156
+[22/11/2017 09:56:25 AM] - MENSAJE: [Microsoft][ODBC Driver 11 for SQL Server][SQL Server]Sintaxis incorrecta cerca de la palabra clave 'ORDER'.
+[22/11/2017 09:56:25 AM] - CONSULTA: 
+  [dbo].[reporte_checadas_excel_ctro]
+  '20171111',
+  '20171125',
+  '827040210400',
+  '0',
+  '1',
+  '3',
+  'LEFT (L.centro, 10) = LEFT (''827040210400'', 10)',
+  '1',
+  '',
+  '',
+  '',
+  'WHERE ROW_NUM BETWEEN ( - 1) *  + 1 AND ( - 1) *  + ',
+  ''
+  
+:::::::::::::::::::::::ERROR SQL:::::::::::::::::::::::
+[22/11/2017 09:56:42 AM] - SQLSTATE: 42000
+[22/11/2017 09:56:42 AM] - CODIGO: 156
+[22/11/2017 09:56:42 AM] - MENSAJE: [Microsoft][ODBC Driver 11 for SQL Server][SQL Server]Sintaxis incorrecta cerca de la palabra clave 'ORDER'.
+[22/11/2017 09:56:42 AM] - CONSULTA: 
+  [dbo].[reporte_checadas_excel_ctro]
+  '20171111',
+  '20171125',
+  '827040210400',
+  '0',
+  '1',
+  '3',
+  'LEFT (L.centro, 10) = LEFT (''827040210400'', 10)',
+  '1',
+  '',
+  '',
+  '',
+  'WHERE ROW_NUM BETWEEN ( - 1) *  + 1 AND ( - 1) *  + ',
+  ''
+  
+:::::::::::::::::::::::ERROR SQL:::::::::::::::::::::::
+[22/11/2017 10:06:43 AM] - SQLSTATE: 42000
+[22/11/2017 10:06:43 AM] - CODIGO: 156
+[22/11/2017 10:06:43 AM] - MENSAJE: [Microsoft][ODBC Driver 11 for SQL Server][SQL Server]Sintaxis incorrecta cerca de la palabra clave 'ORDER'.
+[22/11/2017 10:06:43 AM] - CONSULTA: 
+  [dbo].[reporte_checadas_excel_ctro]
+  '20171111',
+  '20171125',
+  '827040210400',
+  '0',
+  '1',
+  '3',
+  'LEFT (L.centro, 10) = LEFT (''827040210400'', 10)',
+  '1',
+  '',
+  '',
+  '',
+  'WHERE ROW_NUM BETWEEN ( - 1) *  + 1 AND ( - 1) *  + ',
+  ''
+  
+:::::::::::::::::::::::LOGIN:::::::::::::::::::::::
+[22/11/2017 10:07:04 AM] - SE HA LOGEADO EL USUARIO: sudo
+:::::::::::::::::::::::LOGIN:::::::::::::::::::::::
+[22/11/2017 10:07:35 AM] - SE HA LOGEADO EL USUARIO: nombahia
+:::::::::::::::::::::::LOGIN:::::::::::::::::::::::
+[22/11/2017 10:10:23 AM] - SE HA LOGEADO EL USUARIO: nombahia
+:::::::::::::::::::::::ERROR SQL:::::::::::::::::::::::
+[22/11/2017 10:23:11 AM] - SQLSTATE: 08S01
+[22/11/2017 10:23:11 AM] - CODIGO: -2147467259
+[22/11/2017 10:23:11 AM] - MENSAJE: [Microsoft][ODBC Driver 11 for SQL Server]Communication link failure
+[22/11/2017 10:23:11 AM] - CONSULTA: [dbo].[reporte_checadas_excel_ctro]
+          '20171111',
+          '20171125',
+          '827040110900',
+          '0',
+          '1',
+          '3',
+          'LEFT (L.centro, 10) = LEFT (''827040110900'', 10)',
+          '1',
+          '1',
+          '10',
+          '',
+          '',
+          ''
+          
+:::::::::::::::::::::::ERROR SQL:::::::::::::::::::::::
+[22/11/2017 10:26:49 AM] - SQLSTATE: 08S01
+[22/11/2017 10:26:49 AM] - CODIGO: -2147467259
+[22/11/2017 10:26:49 AM] - MENSAJE: [Microsoft][ODBC Driver 11 for SQL Server]Communication link failure
+[22/11/2017 10:26:49 AM] - CONSULTA: [dbo].[reporte_checadas_excel_ctro]
+          '20171111',
+          '20171125',
+          '827040110900',
+          '0',
+          '1',
+          '3',
+          'LEFT (L.centro, 10) = LEFT (''827040110900'', 10)',
+          '1',
+          '1',
+          '10',
+          '',
+          '',
+          ''
+          
+:::::::::::::::::::::::ERROR SQL:::::::::::::::::::::::
+[22/11/2017 10:49:04 AM] - SQLSTATE: 08S01
+[22/11/2017 10:49:04 AM] - CODIGO: -2147467259
+[22/11/2017 10:49:04 AM] - MENSAJE: [Microsoft][ODBC Driver 11 for SQL Server]Communication link failure
+[22/11/2017 10:49:04 AM] - CONSULTA: [dbo].[reporte_checadas_excel_ctro]
+          '20171111',
+          '20171125',
+          '827040110900',
+          '0',
+          '1',
+          '3',
+          'LEFT (L.centro, 10) = LEFT (''827040110900'', 10)',
+          '1',
+          '1',
+          '10',
+          '',
+          '',
+          ''
+          
+:::::::::::::::::::::::ERROR SQL:::::::::::::::::::::::
+[22/11/2017 10:52:14 AM] - SQLSTATE: 08S01
+[22/11/2017 10:52:14 AM] - CODIGO: -2147467259
+[22/11/2017 10:52:14 AM] - MENSAJE: [Microsoft][ODBC Driver 11 for SQL Server]Communication link failure
+[22/11/2017 10:52:14 AM] - CONSULTA: [dbo].[reporte_checadas_excel_ctro]
+          '20171111',
+          '20171125',
+          '827040110900',
+          '0',
+          '1',
+          '3',
+          'LEFT (L.centro, 10) = LEFT (''827040110900'', 10)',
+          '1',
+          '1',
+          '10',
+          '',
+          '',
+          ''
+          
+:::::::::::::::::::::::ERROR SQL:::::::::::::::::::::::
+[22/11/2017 11:04:12 AM] - SQLSTATE: 08S01
+[22/11/2017 11:04:12 AM] - CODIGO: -2147467259
+[22/11/2017 11:04:12 AM] - MENSAJE: [Microsoft][ODBC Driver 11 for SQL Server]Communication link failure
+[22/11/2017 11:04:12 AM] - CONSULTA: [dbo].[reporte_checadas_excel_ctro]
+          '20171111',
+          '20171125',
+          '827040110900',
+          '0',
+          '1',
+          '3',
+          'LEFT (L.centro, 10) = LEFT (''827040110900'', 10)',
+          '1',
+          '1',
+          '10',
+          '',
+          '',
+          ''
+          
+:::::::::::::::::::::::ERROR SQL:::::::::::::::::::::::
+[22/11/2017 11:08:46 AM] - SQLSTATE: 08S01
+[22/11/2017 11:08:46 AM] - CODIGO: -2147467259
+[22/11/2017 11:08:46 AM] - MENSAJE: [Microsoft][ODBC Driver 11 for SQL Server]Communication link failure
+[22/11/2017 11:08:46 AM] - CONSULTA: [dbo].[reporte_checadas_excel_ctro]
+          '20171111',
+          '20171125',
+          '827040110900',
+          '0',
+          '1',
+          '3',
+          'LEFT (L.centro, 10) = LEFT (''827040110900'', 10)',
+          '1',
+          '1',
+          '10',
+          '',
+          '',
+          ''
+          
+:::::::::::::::::::::::ERROR SQL:::::::::::::::::::::::
+[22/11/2017 11:11:04 AM] - SQLSTATE: 08S01
+[22/11/2017 11:11:04 AM] - CODIGO: -2147467259
+[22/11/2017 11:11:04 AM] - MENSAJE: [Microsoft][ODBC Driver 11 for SQL Server]Communication link failure
+[22/11/2017 11:11:04 AM] - CONSULTA: [dbo].[reporte_checadas_excel_ctro]
+          '20171111',
+          '20171125',
+          '827040110900',
+          '0',
+          '1',
+          '3',
+          'LEFT (L.centro, 10) = LEFT (''827040110900'', 10)',
+          '1',
+          '1',
+          '10',
+          '',
+          '',
+          ''
+          
+:::::::::::::::::::::::ERROR SQL:::::::::::::::::::::::
+[22/11/2017 11:13:35 AM] - SQLSTATE: 08S01
+[22/11/2017 11:13:35 AM] - CODIGO: -2147467259
+[22/11/2017 11:13:35 AM] - MENSAJE: [Microsoft][ODBC Driver 11 for SQL Server]Communication link failure
+[22/11/2017 11:13:35 AM] - CONSULTA: [dbo].[reporte_checadas_excel_ctro]
+          '20171111',
+          '20171125',
+          '827040110900',
+          '0',
+          '1',
+          '3',
+          'LEFT (L.centro, 10) = LEFT (''827040110900'', 10)',
+          '1',
+          '1',
+          '10',
+          '',
+          '',
+          ''
+          
+:::::::::::::::::::::::LOGIN:::::::::::::::::::::::
+[22/11/2017 11:19:49 AM] - SE HA LOGEADO EL USUARIO: nombahia
+:::::::::::::::::::::::ERROR SQL:::::::::::::::::::::::
+[22/11/2017 11:58:58 AM] - SQLSTATE: 08S01
+[22/11/2017 11:58:58 AM] - CODIGO: -2147467259
+[22/11/2017 11:58:58 AM] - MENSAJE: [Microsoft][ODBC Driver 11 for SQL Server]Communication link failure
+[22/11/2017 11:58:58 AM] - CONSULTA: [dbo].[reporte_checadas_excel_ctro]
+          '20171111',
+          '20171125',
+          '827040110900',
+          '0',
+          '1',
+          '3',
+          'LEFT (L.centro, 10) = LEFT (''827040110900'', 10)',
+          '1',
+          '1',
+          '10',
+          '',
+          '',
+          ''
+          
+:::::::::::::::::::::::ERROR SQL:::::::::::::::::::::::
+[22/11/2017 12:31:21 PM] - SQLSTATE: 08S01
+[22/11/2017 12:31:21 PM] - CODIGO: -2147467259
+[22/11/2017 12:31:21 PM] - MENSAJE: [Microsoft][ODBC Driver 11 for SQL Server]Communication link failure
+[22/11/2017 12:31:21 PM] - CONSULTA: [dbo].[reporte_checadas_excel_ctro]
+          '20171111',
+          '20171125',
+          '827040110900',
+          '0',
+          '1',
+          '3',
+          'LEFT (L.centro, 10) = LEFT (''827040110900'', 10)',
+          '1',
+          '1',
+          '10',
+          '',
+          '',
+          ''
+          
+:::::::::::::::::::::::ERROR SQL:::::::::::::::::::::::
+[22/11/2017 12:36:47 PM] - SQLSTATE: 08S01
+[22/11/2017 12:36:47 PM] - CODIGO: -2147467259
+[22/11/2017 12:36:47 PM] - MENSAJE: [Microsoft][ODBC Driver 11 for SQL Server]Communication link failure
+[22/11/2017 12:36:47 PM] - CONSULTA: [dbo].[reporte_checadas_excel_ctro]
+          '20171111',
+          '20171125',
+          '827040110900',
+          '0',
+          '1',
+          '3',
+          'LEFT (L.centro, 10) = LEFT (''827040110900'', 10)',
+          '1',
+          '1',
+          '10',
+          '',
+          '',
+          ''
+          
+:::::::::::::::::::::::LOGIN:::::::::::::::::::::::
+[22/11/2017 12:55:24 PM] - SE HA LOGEADO EL USUARIO: nombahia
+:::::::::::::::::::::::LOGIN:::::::::::::::::::::::
+[22/11/2017 01:27:33 PM] - SE HA LOGEADO EL USUARIO: sudo
+:::::::::::::::::::::::LOGIN:::::::::::::::::::::::
+[22/11/2017 01:42:21 PM] - SE HA LOGEADO EL USUARIO: nombahia
+:::::::::::::::::::::::LOGIN:::::::::::::::::::::::
+[22/11/2017 01:44:49 PM] - SE HA LOGEADO EL USUARIO: nombahia
+:::::::::::::::::::::::ERROR SQL:::::::::::::::::::::::
+[22/11/2017 02:10:32 PM] - SQLSTATE: 08S01
+[22/11/2017 02:10:32 PM] - CODIGO: -2147467259
+[22/11/2017 02:10:32 PM] - MENSAJE: [Microsoft][ODBC Driver 11 for SQL Server]Communication link failure
+[22/11/2017 02:10:32 PM] - CONSULTA: [dbo].[reporte_checadas_excel_ctro]
+          '20171111',
+          '20171125',
+          '827040110900',
+          '0',
+          '1',
+          '3',
+          'LEFT (L.centro, 10) = LEFT (''827040110900'', 10)',
+          '1',
+          '1',
+          '10',
+          '',
+          '',
+          ''
+          
+:::::::::::::::::::::::ERROR SQL:::::::::::::::::::::::
+[22/11/2017 02:24:08 PM] - SQLSTATE: 08S01
+[22/11/2017 02:24:08 PM] - CODIGO: -2147467259
+[22/11/2017 02:24:08 PM] - MENSAJE: [Microsoft][ODBC Driver 11 for SQL Server]Communication link failure
+[22/11/2017 02:24:08 PM] - CONSULTA: [dbo].[reporte_checadas_excel_ctro]
+          '20171111',
+          '20171125',
+          '827040110900',
+          '0',
+          '1',
+          '3',
+          'LEFT (L.centro, 10) = LEFT (''827040110900'', 10)',
+          '1',
+          '1',
+          '10',
+          '',
+          '',
+          ''
+          
+:::::::::::::::::::::::LOGIN:::::::::::::::::::::::
+[22/11/2017 03:01:38 PM] - SE HA LOGEADO EL USUARIO: nombahia

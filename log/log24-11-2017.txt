@@ -1,0 +1,95 @@
+:::::::::::::::::::::::LOGIN:::::::::::::::::::::::
+[24/11/2017 08:40:46 AM] - SE HA LOGEADO EL USUARIO: nombahia
+:::::::::::::::::::::::LOGIN:::::::::::::::::::::::
+[24/11/2017 09:10:53 AM] - SE HA LOGEADO EL USUARIO: nombahia
+:::::::::::::::::::::::ERROR SQL:::::::::::::::::::::::
+[24/11/2017 09:52:16 AM] - SQLSTATE: 08S01
+[24/11/2017 09:52:16 AM] - CODIGO: -2147467259
+[24/11/2017 09:52:16 AM] - MENSAJE: [Microsoft][ODBC Driver 11 for SQL Server]Communication link failure
+[24/11/2017 09:52:16 AM] - CONSULTA: [dbo].[reporte_checadas_excel_ctro]
+          '20171111',
+          '20171125',
+          '827040110900',
+          '0',
+          '1',
+          '3',
+          'LEFT (L.centro, 10) = LEFT (''827040110900'', 10)',
+          '1',
+          '1',
+          '10',
+          '',
+          '',
+          ''
+          
+:::::::::::::::::::::::ERROR SQL:::::::::::::::::::::::
+[24/11/2017 09:56:13 AM] - SQLSTATE: 08S01
+[24/11/2017 09:56:13 AM] - CODIGO: -2147467259
+[24/11/2017 09:56:13 AM] - MENSAJE: [Microsoft][ODBC Driver 11 for SQL Server]Communication link failure
+[24/11/2017 09:56:13 AM] - CONSULTA: [dbo].[reporte_checadas_excel_ctro]
+          '20171111',
+          '20171125',
+          '827040110900',
+          '0',
+          '1',
+          '3',
+          'LEFT (L.centro, 10) = LEFT (''827040110900'', 10)',
+          '1',
+          '1',
+          '10',
+          '',
+          '',
+          ''
+          
+:::::::::::::::::::::::LOGIN:::::::::::::::::::::::
+[24/11/2017 09:57:13 AM] - SE HA LOGEADO EL USUARIO: nombahia
+:::::::::::::::::::::::LOGIN:::::::::::::::::::::::
+[24/11/2017 10:05:30 AM] - SE HA LOGEADO EL USUARIO: nombahia
+:::::::::::::::::::::::LOGIN:::::::::::::::::::::::
+[24/11/2017 10:11:03 AM] - SE HA LOGEADO EL USUARIO: nombahia
+:::::::::::::::::::::::ERROR SQL:::::::::::::::::::::::
+[24/11/2017 10:19:22 AM] - SQLSTATE: 08S01
+[24/11/2017 10:19:22 AM] - CODIGO: -2147467259
+[24/11/2017 10:19:22 AM] - MENSAJE: [Microsoft][ODBC Driver 11 for SQL Server]Communication link failure
+[24/11/2017 10:19:22 AM] - CONSULTA: [dbo].[reporte_checadas_excel_ctro]
+          '20171111',
+          '20171125',
+          '827040110900',
+          '0',
+          '1',
+          '2',
+          'LEFT (L.centro, 10) = LEFT (''827040110900'', 10)',
+          '1',
+          '1',
+          '10',
+          '',
+          '',
+          ''
+          
+:::::::::::::::::::::::LOGIN:::::::::::::::::::::::
+[24/11/2017 10:53:55 AM] - SE HA LOGEADO EL USUARIO: sudo
+:::::::::::::::::::::::ERROR SQL:::::::::::::::::::::::
+[24/11/2017 12:19:41 PM] - SQLSTATE: 42000
+[24/11/2017 12:19:41 PM] - CODIGO: 8114
+[24/11/2017 12:19:41 PM] - MENSAJE: [Microsoft][ODBC Driver 11 for SQL Server][SQL Server]Error al convertir el tipo de datos varchar a numeric.
+[24/11/2017 12:19:41 PM] - CONSULTA: 
+  [dbo].[reporte_checadas_excel_ctro]
+  '20171111',
+  '20171125',
+  '',
+  '',
+  '',
+  '2',
+  'L.centro = ''''',
+  '0',
+  '5',
+  '10',
+  '',
+  'WHERE ROW_NUM BETWEEN (5 - 1) * 10 + 1 AND (5 - 1) * 10 + 10',
+  'codigo'
+:::::::::::::::::::::::LOGIN:::::::::::::::::::::::
+[24/11/2017 12:20:28 PM] - SE HA LOGEADO EL USUARIO: nombahia
+:::::::::::::::::::::::ERROR SQL:::::::::::::::::::::::
+[24/11/2017 12:30:36 PM] - SQLSTATE: 42000
+[24/11/2017 12:30:36 PM] - CODIGO: 105
+[24/11/2017 12:30:36 PM] - MENSAJE: [Microsoft][ODBC Driver 11 for SQL Server][SQL Server]Falta la comilla de cierre después de la cadena de caracteres ';'.
+[24/11/2017 12:30:36 PM] - CONSULTA: UPDATE datos SET valor = ''' WHERE codigo = '1358' AND nombre = '12-11-2017' AND periodoP = '22' AND tipoN = '4' AND IDEmpresa = '2' AND Centro = '827040111300';
