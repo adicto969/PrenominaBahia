@@ -14,17 +14,17 @@ define('M_DB_PASS', '');
 define('M_DB_NOMBRE', 'faltascabos');
 
 #Constantes de Conexion SQLSERVER
-define('S_DB_SERVER', 'DESKTOP-2POHOQ5\\JUAN');
+define('S_DB_SERVER', 'DESKTOP-2POHOQ5\\JUAN2017');
 define('S_DB_USER', 'sa');
 define('S_DB_PASS', 'Enterprice9');
-define('S_DB_NOMBRE', 'bahia');
+define('S_DB_NOMBRE', 'BAHIA');
 
 define('Unidad', 'C:\\apsisistemas\\ARCHIVOS\\');
 #Constantes de la App
 define('HTML_DIR', 'html/');
 define('TITULO_PAGINA', 'PRENOMINA');
-define('FECHA_MODIFICACION', 'Ultima Actualización : 16/11/2017');
-define('URL_PAGINA', 'http://localhost:8080/DEPURADO_PRENOMINA/GENERAL/PrenominaBahia/');
+define('FECHA_MODIFICACION', 'Ultima Actualización : 24/02/2018');
+define('URL_PAGINA', 'http://localhost:8080/GitHub/Bahia/');
 
 define('Autoriza1', 'sudo');
 define('Autoriza2', 'Nominas');
@@ -34,7 +34,7 @@ define('SupDepNumOrden', '2');
 
 $abcd = array("AA", "AB", "AC", "AD", "AE", "A", "B", "C", "D", "E", "F", "G", "H", "I", "J", "K", "L", "M", "N", "O", "P", "Q", "R", "S", "T", "U", "V", "W", "X", "Y", "Z");
 $MESES = array("", "ENERO", "FEBRERO", "MARZO", "ABRIL", "MAYO", "JUNIO", "JULIO", "AGOSTO", "SEPTIEMBRE", "OCTUBRE", "NOVIEMBRE", "DICIEMBRE");
-$ayoA = 2017;
+$ayoA = 2018;
 $formatoFecha = 'Y/m/d';
 require_once('consultas/Class.Conexion.php');
 require_once('consultas/ConGenerales.php');

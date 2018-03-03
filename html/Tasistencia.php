@@ -74,7 +74,7 @@ $fecha4 = $fecha2;
 
 ?>
 
-<h4 style="text-align: center;"><?php echo $NomDep; ?></h4>
+<h4 style="text-align: center;"><?php echo strtoupper(utf8_encode($NomDep)); ?></h4>
 <p class="center" style="font-size: 18px;"><?php echo strtoupper(utf8_encode($NombreSupervisor)); ?></p>
 <div class="row">
   <div id="Ptasis" class="col s12 m6 l4">

@@ -133,7 +133,7 @@ function AHD(){
 
 ///CAMBIAR DEPARTAMENTO
 
-$('#SelectDep').change(function() {
+$('.SelectDep').change(function() {
   var conexion, variable, str, idEmp;
   str = $(this).val();
   idEmp = $('#IDEmpConfig').val();

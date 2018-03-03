@@ -55,12 +55,8 @@ class ConexionSRV
  public $consulta2="";
 
  public function ConexionSRV()
- {
-   if(isset($_SESSION['DB'])){
-     $this->conexionInfo = array("Database" => $_SESSION['DB'], "UID" => S_DB_USER, "PWD" => S_DB_PASS);
-   }else {
-     $this->conexionInfo = array("Database" => S_DB_NOMBRE, "UID" => S_DB_USER, "PWD" => S_DB_PASS);
-   }
+ {   
+    $this->conexionInfo = array("Database" => S_DB_NOMBRE, "UID" => S_DB_USER, "PWD" => S_DB_PASS);  
  }
 
  public function conectarBD()
