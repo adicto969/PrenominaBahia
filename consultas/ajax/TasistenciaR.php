@@ -80,7 +80,6 @@ $_arrayCabeceraF = "";
 $_PPPA = explode('|', "0|0");
 $_PPPAempleado = explode('|', "0|0");
 $_PDOM_DLabora = explode('|', "0|0");
-$scriptCargar = "";
 /////////////////////////////////////////
 /////////////// PERIODOS ///////////////
 if($_periodo <= 24){
@@ -293,7 +292,7 @@ if($DepOsub == 1)
   '".$supervisor."',
   '".$IDEmpresa."',
   '".$_tipoNom."',
-  'LEFT (L.centro, ".$MascaraEm.") = LEFT (''".$centro."'', ".$MascaraEm.")',
+  'LEFT (L.centro, 10) = LEFT (''".$centro."'', ".$MascaraEm.")',
   '1',
   '".$pagina."',
   '".$cantidadXpagina."',
@@ -600,30 +599,11 @@ while ($row=$objBDSQL->obtenResult()) {
         ##################################################
         if(empty($row[$value]) && $row['Tpo'] == "E"){
           $_cuerpo .= '<td style="height: 74px;">';
-          if($_tipoNom == 3 && ($_DiaNumero == 6 || $_DiaNumero == 7)){
-            if($_colorF == 1){
-                $_cuerpo .= '<input type="text" name="fecha'.$row['codigo'].$_FechaCol.'[]" '.$bloquear.' style="background-color: #f57c7c;" id="'.$row['codigo'].$_FechaCol.'" value="'.$_valorC.'" onkeyup="GuardarTR('.$row['codigo'].', \''.$_FechaCol.'\', \''.date("d/m/Y", strtotime($fechAumen." + ".$sumaDias." day")).'\')" >';
-            }else {
-               if(empty($_valorC)){
-                $_cuerpo .= '<input type="text" name="fecha'.$row['codigo'].$_FechaCol.'[]" '.$bloquear.' id="'.$row['codigo'].$_FechaCol.'" value="D" onkeyup="GuardarTR('.$row['codigo'].', \''.$_FechaCol.'\', \''.date("d/m/Y", strtotime($fechAumen." + ".$sumaDias." day")).'\')" >';                
-                $scriptCargar .= 'GuardarTR('.$row['codigo'].', \''.$_FechaCol.'\', \''.date("d/m/Y", strtotime($fechAumen." + ".$sumaDias." day")).'\');';
-               }else {
-                $_cuerpo .= '<input type="text" name="fecha'.$row['codigo'].$_FechaCol.'[]" '.$bloquear.' id="'.$row['codigo'].$_FechaCol.'" value="'.$_valorC.'" onkeyup="GuardarTR('.$row['codigo'].', \''.$_FechaCol.'\', \''.date("d/m/Y", strtotime($fechAumen." + ".$sumaDias." day")).'\')" >';                
-               }                              
-            }
+          if($_colorF == 1){
+              $_cuerpo .= '<input type="text" name="fecha'.$row['codigo'].$_FechaCol.'[]" '.$bloquear.' style="background-color: #f57c7c;" id="'.$row['codigo'].$_FechaCol.'" value="'.$_valorC.'" onkeyup="GuardarTR('.$row['codigo'].', \''.$_FechaCol.'\', \''.date("d/m/Y", strtotime($fechAumen." + ".$sumaDias." day")).'\')" >';
           }else {
-            if($_colorF == 1){
-                $_cuerpo .= '<input type="text" name="fecha'.$row['codigo'].$_FechaCol.'[]" '.$bloquear.' style="background-color: #f57c7c;" id="'.$row['codigo'].$_FechaCol.'" value="'.$_valorC.'" onkeyup="GuardarTR('.$row['codigo'].', \''.$_FechaCol.'\', \''.date("d/m/Y", strtotime($fechAumen." + ".$sumaDias." day")).'\')" >';
-            }else {
-               if(empty($_valorC)){
-                $_cuerpo .= '<input type="text" name="fecha'.$row['codigo'].$_FechaCol.'[]" '.$bloquear.' id="'.$row['codigo'].$_FechaCol.'" value="F" onkeyup="GuardarTR('.$row['codigo'].', \''.$_FechaCol.'\', \''.date("d/m/Y", strtotime($fechAumen." + ".$sumaDias." day")).'\')" >';
-                $scriptCargar .= 'GuardarTR('.$row['codigo'].', \''.$_FechaCol.'\', \''.date("d/m/Y", strtotime($fechAumen." + ".$sumaDias." day")).'\');';
-               }else {
-                $_cuerpo .= '<input type="text" name="fecha'.$row['codigo'].$_FechaCol.'[]" '.$bloquear.' id="'.$row['codigo'].$_FechaCol.'" value="'.$_valorC.'" onkeyup="GuardarTR('.$row['codigo'].', \''.$_FechaCol.'\', \''.date("d/m/Y", strtotime($fechAumen." + ".$sumaDias." day")).'\')" >';
-               }                
-            }
+              $_cuerpo .= '<input type="text" name="fecha'.$row['codigo'].$_FechaCol.'[]" '.$bloquear.' id="'.$row['codigo'].$_FechaCol.'" value="'.$_valorC.'" onkeyup="GuardarTR('.$row['codigo'].', \''.$_FechaCol.'\', \''.date("d/m/Y", strtotime($fechAumen." + ".$sumaDias." day")).'\')" >';
           }
-
           $_cuerpo .= '</td>';
         } else {
           if($row['Tpo'] == "E"){
@@ -764,7 +744,6 @@ if(strlen($_cabeceraD) == 148){
   $resultV['contenido'] .= $_arrayCabeceraF;
   $resultV['contenido'] .= '</form>';
   $resultV['contenido'] .= $_BTNS;
-  $resultV['contenido'] .= '<script>'.$scriptCargar.'</script>';
   //$resultV['contenido'] .= '<a class="modal-trigger waves-effect waves-light btn"  onclick="modal()" style="margin: 20px;">Conceptos Extras</a>';
   //$resultV['contenido'] .= '<a class="modal-trigger waves-effect waves-light btn"  onclick="GFaltas()" style="margin: 20px;">Faltas</a>';
 }

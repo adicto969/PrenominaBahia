@@ -10,21 +10,21 @@ date_default_timezone_set('America/Bahia_Banderas'); //misma hora
 #Constantes de Conexion MYSQL
 define('M_DB_SERVER', 'localhost');
 define('M_DB_USER', 'root');
-define('M_DB_PASS', '');
-define('M_DB_NOMBRE', 'faltascabos');
+define('M_DB_PASS', 'apsisistemas');
+define('M_DB_NOMBRE', 'faltacabos');
 
 #Constantes de Conexion SQLSERVER
-define('S_DB_SERVER', 'DESKTOP-2POHOQ5\\JUAN2017');
+define('S_DB_SERVER', 'BASEDEDATOS\\APSIBADEBA');
 define('S_DB_USER', 'sa');
-define('S_DB_PASS', 'Enterprice9');
-define('S_DB_NOMBRE', 'BAHIA');
+define('S_DB_PASS', 'apsiSQL2008tepic');
+define('S_DB_NOMBRE', 'APSISISTEMAS');
 
 define('Unidad', 'C:\\apsisistemas\\ARCHIVOS\\');
 #Constantes de la App
 define('HTML_DIR', 'html/');
 define('TITULO_PAGINA', 'PRENOMINA');
-define('FECHA_MODIFICACION', 'Ultima Actualización : 24/02/2018');
-define('URL_PAGINA', 'http://localhost:8080/GitHub/Bahia/');
+define('FECHA_MODIFICACION', 'Ultima Actualización : 16/11/2017');
+define('URL_PAGINA', 'http://10.0.0.4:8080/Prenomina/');
 
 define('Autoriza1', 'sudo');
 define('Autoriza2', 'Nominas');
