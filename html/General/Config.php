@@ -16,7 +16,7 @@ if($_SESSION['Permiso'] == 1 || $_SESSION['Sudo'] == 1){
 	echo '		<select class="SelectDep">';
 	echo '			<option value="0v">DEPARTAMENTOS 2018</option>';
 
-	$query = "SELECT LTRIM ( RTRIM ( centro ) ) AS centro, nomdepto FROM centros WHERE empresa = '".$IDEmpresa."' and defindpto2 = ".DepNumOrden." and LEFT(centro, 1) LIKE '8%' ORDER BY nomdepto asc;";
+	$query = "SELECT LTRIM ( RTRIM ( centro ) ) AS centro, nomdepto FROM centros WHERE empresa = '".$IDEmpresa."' and defindpto2 = ".DepNumOrden." and LEFT(centro, 1) LIKE '7%' ORDER BY nomdepto asc;";
 	$objBDSQL->consultaBD($query);
 	while($datos = $objBDSQL->obtenResult()) {
 		if($centro == $datos["centro"]){
@@ -33,7 +33,7 @@ if($_SESSION['Permiso'] == 1 || $_SESSION['Sudo'] == 1){
 	echo '		<select class="SelectDep">';
 	echo '			<option value="0v">DEPARTAMENTOS 2017</option>';
 
-	$query = "SELECT LTRIM ( RTRIM ( centro ) ) AS centro, nomdepto FROM centros WHERE empresa = '".$IDEmpresa."' and defindpto2 = ".DepNumOrden." and LEFT(centro, 1) LIKE '7%' ORDER BY nomdepto asc;";
+	$query = "SELECT LTRIM ( RTRIM ( centro ) ) AS centro, nomdepto FROM centros WHERE empresa = '".$IDEmpresa."' and defindpto2 = ".DepNumOrden." and LEFT(centro, 1) LIKE '8%' ORDER BY nomdepto asc;";
 	$objBDSQL->consultaBD($query);
 	while($datos = $objBDSQL->obtenResult()) {
 		if($centro == $datos["centro"]){
