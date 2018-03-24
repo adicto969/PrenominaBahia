@@ -24,7 +24,7 @@ if($TN == 1 || $periodo > 24){
 
 }
 ?>
-<h4 style="text-align: center;"><?php echo $NomDep; ?></h4>
+<h4 style="text-align: center;"><?php echo utf8_encode($NomDep); ?></h4>
 <h5 style="text-align: center;">ROL DE HORARIO</h5>
 <div>
   <center>

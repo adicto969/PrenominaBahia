@@ -121,8 +121,8 @@ if($numC > 0){
 		echo '
 			<tr>
 				<td>'.$row["codigo"].'</td>
-				<td>'.utf8_decode($row["nombre"]).'</td>
-				<td>'.$row["actividad"].'</td>
+				<td>'.utf8_encode($row["nombre"]).'</td>
+				<td>'.utf8_encode($row["actividad"]).'</td>
 				<td>'.$row["sueldo"].'</td>
 				<td>'.$row["Fecha"].'</td>
 				<td>'.$row["num_conc"].'</td>

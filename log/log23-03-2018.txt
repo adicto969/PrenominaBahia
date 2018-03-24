@@ -1,0 +1,16 @@
+:::::::::::::::::::::::LOGIN:::::::::::::::::::::::
+[23/03/2018 08:05:39 PM] - SE HA LOGEADO EL USUARIO: sudo
+:::::::::::::::::::::::LOGIN:::::::::::::::::::::::
+[23/03/2018 08:25:34 PM] - SE HA LOGEADO EL USUARIO: sudo
+:::::::::::::::::::::::LOGIN:::::::::::::::::::::::
+[23/03/2018 08:35:33 PM] - SE HA LOGEADO EL USUARIO: sudo
+:::::::::::::::::::::::LOGIN:::::::::::::::::::::::
+[23/03/2018 08:41:56 PM] - SE HA LOGEADO EL USUARIO: sudo
+:::::::::::::::::::::::LOGIN:::::::::::::::::::::::
+[23/03/2018 08:46:21 PM] - SE HA LOGEADO EL USUARIO: sudo
+:::::::::::::::::::::::LOGIN:::::::::::::::::::::::
+[23/03/2018 08:56:22 PM] - SE HA LOGEADO EL USUARIO: sudo
+:::::::::::::::::::::::LOGIN:::::::::::::::::::::::
+[23/03/2018 09:06:29 PM] - SE HA LOGEADO EL USUARIO: sudo 
+:::::::::::::::::::::::LOGIN:::::::::::::::::::::::
+[23/03/2018 09:10:31 PM] - SE HA LOGEADO EL USUARIO: sudo

@@ -165,7 +165,7 @@ if($numCol['cantidad'] > 0){
 			<tr>
 				<td>'.$row["codigo"].'</td>
 				<td>'.utf8_encode($row["nombre"]).'</td>
-				<td>'.$row["actividad"].'</td>';
+				<td>'.utf8_encode($row["actividad"]).'</td>';
 
 		$consultM = "SELECT PDOM, DLaborados, PA, PP FROM ajusteempleado WHERE IDEmpleado = '".$row["codigo"]."';";
 

@@ -1,4 +1,4 @@
-<h4 style="text-align: center;"><?php echo $NomDep; ?></h4>
+<h4 style="text-align: center;"><?php echo utf8_encode($NomDep); ?></h4>
 <h5 style="text-align: center;">CONTRATOS</h5>
 <div class="row">
   <div class="col s12 l4" id="divContra">

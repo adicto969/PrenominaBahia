@@ -5,7 +5,7 @@
 if(isset($_SESSION['IDUser'])){
   $bdM = new ConexionM();
   $bdM->__constructM();
-  $sql = $bdM->query("SELECT IDEmpresa, centro, DB, UserDB, PassDB, PC, TN, PP, PA, POR, correo, server, DoS, FactorA, supervisor FROM config WHERE IDUser = '".$_SESSION['IDUser']."' LIMIT 1;");
+  $sql = $bdM->query("SELECT IDEmpresa, centro, DB, UserDB, PassDB, PC, TN, PP, PA, POR, correo, server, DoS, FactorA, supervisor, ayo FROM config WHERE IDUser = '".$_SESSION['IDUser']."' LIMIT 1;");
   if($bdM->rows($sql) > 0){
     $datos = $bdM->recorrer($sql);
     $IDEmpresa = $datos[0];
@@ -23,6 +23,7 @@ if(isset($_SESSION['IDUser'])){
     $DepOsub = $datos[12];
     $FactorA = $datos[13];
     $supervisor = $datos[14];
+    $ayo = $datos[15];
     $_SESSION['TN'] = $TN;
   }else {
     $error = "NO SE HAN ENCONTRADO DATOS MYSQL(Usuario)";

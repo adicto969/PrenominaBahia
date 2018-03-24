@@ -1,4 +1,4 @@
-<h4 style="text-align: center;"><?php echo $NomDep; ?></h4>
+<h4 style="text-align: center;"><?php echo utf8_encode($NomDep); ?></h4>
 <h5 style="text-align: center;" id="Lab" onclick="labels(event)">AJUSTE EMPLEADOS</h5>
 
 <div class="modal " id="modal1" style="text-align: center; padding-top: 10px;">

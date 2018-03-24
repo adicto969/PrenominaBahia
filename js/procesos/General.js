@@ -332,6 +332,43 @@ $("#IDEmpConfig").keyup(function(e) {
 
 });
 
+$("#ayo").keyup(function(e) {
+
+  if(e.which == 13){
+    if($(this).val() != "" && $(this).val() > 0){
+      var conexion, variables, ayo;
+      ayo = $(this).val();
+
+        variables = "centro=*&Tipo=66&idEmp=0&ayo="+ayo;
+
+        conexion = window.XMLHttpRequest ? new XMLHttpRequest() : new ActiveXObject('Microsoft.XMLHTTP');
+        conexion.onreadystatechange = function() {
+          if(conexion.readyState == 4 && conexion.status == 200){
+            if(conexion.responseText == 2){
+              Materialize.toast('El año fue actualizado', 1500);
+              setTimeout(function(){
+                location.reload();
+              }, 500);
+            }else if(conexion.responseText == 0){
+              Materialize.toast('Año incorrecto', 1000);
+            }else {
+              Materialize.toast('ERROR INTENTELO DE NUEVO '+conexion.responseText, 1000);
+            }
+          }
+        }
+
+        conexion.open('POST', 'ajax.php?modo=CambioDep', true);
+        conexion.setRequestHeader('Content-Type', 'application/x-www-form-urlencoded');
+        conexion.send(variables);
+
+    }else {
+      Materialize.toast('El año es requerido', 1500);
+      $('#ayo').focus();
+    }
+
+  }
+
+});
 
 ////Cambiar estatus de las notificaciones
 function camStatus(ID) {

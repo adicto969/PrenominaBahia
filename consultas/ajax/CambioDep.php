@@ -42,7 +42,18 @@ if($Tipo == 9){
     }
   }
 
-}else {
+}else if($Tipo == 66){
+
+  $ayoI = $_POST['ayo']; 
+  $InsertarCP = "UPDATE config SET ayo = '$ayoI' WHERE IDUser = '".$_SESSION['IDUser']."';";
+
+  if($bd1->query($InsertarCP)){
+    $Estado = 2;
+  }else {
+    echo $bd1->errno. '  '.$bd1->error;
+  }
+
+} else {
 
   $InsertarCP = "UPDATE config SET centro = '$Dep', IDEmpresa = '$idEmp', DoS = '$Tipo' WHERE IDUser = '".$_SESSION['IDUser']."';";
 

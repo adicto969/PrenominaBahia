@@ -59,7 +59,7 @@ function Rol(){
       data: variables
     }).done(function(datos) {
       try{
-        var jsonDatos = JSON.parse(datos.replace("\ufeff", ""));
+        var jsonDatos = JSON.parse(datos.replace(/\ufeff/g, ''));
         resultado = '<h4>ROL ACTUALIZADOS</h4>';
         resultado += '<h5>Correctos: '+jsonDatos.exito+'</h5>';
         resultado += '<h5>Errores: '+jsonDatos.error+'</h5>';
@@ -104,7 +104,7 @@ function verRol() {
       data: 'cantidadXpagina='+cantidadXpagina+'&pagina='+pagina+'&order='+ordenar+'&buscar='+busqueda
     }).done(function(datos) {
       try {
-        var jsonDatos = JSON.parse(datos.replace("\ufeff", ""));
+        var jsonDatos = JSON.parse(datos.replace(/\ufeff/g, ''));
         if(jsonDatos.error == 0){
           $('#estado_consulta_ajax').html(jsonDatos.contenido);
 

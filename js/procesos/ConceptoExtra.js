@@ -50,7 +50,7 @@ function cambiarPeriodo() {
 
           	} else {
 
-	            var fechaJSON = JSON.parse(conexion.responseText);
+	            var fechaJSON = JSON.parse(conexion.responseText.replace(/\ufeff/g, ''));
 
 	            document.getElementById('btnT').disabled  = false;
           	}

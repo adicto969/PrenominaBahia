@@ -58,7 +58,7 @@ function verContratos(){
     contentType: "application/x-www-form-urlencoded;charset=UTF-8"
   }).done(function(datos){
     try{
-      var jsonDatos = JSON.parse(datos.replace("\ufeff\ufeff", ""));
+      var jsonDatos = JSON.parse(datos.replace(/\ufeff/g, ''));
       if(jsonDatos.error == 0){
         $('#estado_consulta_ajax').html(jsonDatos.contenido);
         $('#paginador').html(pagina + " de " + jsonDatos.paginas);
@@ -104,7 +104,7 @@ function Gcontratos(){
       data: variables
     }).done(function(datos) {
       try {
-        var jsonDatos = JSON.parse(datos.replace("\ufeff", ""));
+        var jsonDatos = JSON.parse(datos.replace(/\ufeff/g, ''));
         if(jsonDatos.error == '-1'){
           $('#textCargado').html("OCURRIO UN ERROR");
           setTimeout(function() {

@@ -13,6 +13,7 @@ if($_SESSION['Permiso'] == 1 || $_SESSION['Sudo'] == 1){
 	echo '		<div class="col s12 m4"></div>';
 	echo '		<div class="col s12 m4 input-field">';
 	echo '		<input type="number" id="IDEmpConfig" placeholder="ID EMPRESA" value="'.$IDEmpresa.'" style="width: 100%;">';
+	echo '      <input type="number" id="ayo" placeholder="Año de operacion" value="'.$ayo.'" style="width: 100%;">';
 	echo '		<select class="SelectDep">';
 	echo '			<option value="0v">DEPARTAMENTOS 2018</option>';
 

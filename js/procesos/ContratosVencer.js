@@ -20,7 +20,7 @@ function verContratos(){
     data: variable
   }).done(function(datos) {
     try {
-      var jsonDatos = JSON.parse(datos.replace("\ufeff", ""));
+      var jsonDatos = JSON.parse(datos.replace(/\ufeff/g, ''));
       if(jsonDatos.error == '1'){
         $('#estado_consulta_ajax').html("<div style='width: 100%' class='deep-orange accent-4'><h6 class='center-align' style='padding-top: 5px; padding-bottom: 5px; color: white;'>Ocurrio un error !</h6></div>");
       }else {

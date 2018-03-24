@@ -70,7 +70,7 @@ $objBDSQL->cerrarBD();
 
 ?>
 
-<h4 style="text-align: center;"><?php echo $NomDep; ?></h4>
+<h4 style="text-align: center;"><?php echo utf8_encode($NomDep); ?></h4>
 <h5 style="text-align: center;">RETARDOS</h5>
 
 <div class="row">

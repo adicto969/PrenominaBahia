@@ -266,8 +266,8 @@ if($numC > 0){
 		echo '
 			<tr>
 				<td>'.$row["CODIGO"].'</td>
-				<td>'.utf8_decode($row["NOMBRE"]).'</td>
-				<td>'.$row["ACTIVIDAD"].'</td>
+				<td>'.utf8_encode($row["NOMBRE"]).'</td>
+				<td>'.utf8_encode($row["ACTIVIDAD"]).'</td>
 				<td>'.$row["FECHA"].'</td>
 				<td>'.$row["NUM_CONC"].'</td>
 				<td>'.truncateFloat($row["PDOM"], 2).'</td>

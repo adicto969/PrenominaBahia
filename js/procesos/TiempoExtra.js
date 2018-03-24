@@ -16,7 +16,7 @@ function cambiarPeriodo(){
 
           } else {
 
-            var fechaJSON = JSON.parse(conexion.responseText.replace("\ufeff", ""));
+            var fechaJSON = JSON.parse(conexion.responseText.replace(/\ufeff/g, ''));
 
             document.getElementById('fchI').value = fechaJSON.fecha1;
             document.getElementById('fchF').value = fechaJSON.fecha2;

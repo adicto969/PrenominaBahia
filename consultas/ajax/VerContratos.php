@@ -143,12 +143,12 @@ if($numCol['cantidad'] >= 1){
     <li><a onclick="Ordernar(\'actividad\')">Actividad</a></li>
   </ul>
   <div class="input-field col s6" style="max-width: 211px;margin-left: 20px;">
-    <input id="buscarV" type="text" class="validate" style="width: 164px; padding-top: 5px" value="'.$busquedaV.'">
+    <input id="buscarV" type="text" class="validate" style="width: 164px; padding-top: 5px" value="'.utf8_encode($busquedaV).'">
     <i class="material-icons prefix" onclick="busquedaF()" style="line-height: 39px;text-align: center;border: 1px solid rgba(0, 0, 0, .2);cursor:pointer;">search</i>
   </div>
         <form method="post" id="frmContratos">
-        <input type="hidden" name="Emp9" value="'.$NombreEmpresa.'" />
-        <input type="hidden" name="NomDep" value="'.$NomDep.'" />
+        <input type="hidden" name="Emp9" value="'.utf8_encode($NombreEmpresa).'" />
+        <input type="hidden" name="NomDep" value="'.utf8_encode($NomDep).'" />
         <input type="hidden" name="centro" value="'.$centro.'" />
         <input type="hidden" name="TNomina" value="'.$TN.'" />
         <table id="tablaContra" class="responsive-table striped highlight centered" style="border: 1px solid #000080;">
@@ -204,8 +204,8 @@ if($numCol['cantidad'] >= 1){
     <tr ondblclick="seleccion('.$row["codigo"].')" id="'.$row["codigo"].'">
     <td>'.$row["codigo"].'</td>
     <td style="text-align: left;">'.utf8_encode($row["nombre"]).'</td>
-    <td>'.$row["ocupacion"].'</td>
-    <td>'.$row["actividad"].'</td>
+    <td>'.utf8_encode($row["ocupacion"]).'</td>
+    <td>'.utf8_encode($row["actividad"]).'</td>
     <td>'.$row["horario"].'</td>
     <td>'.$row["fechaAnti"].'</td>
     <td>'.$row["fechaAlta"].'</td>
@@ -319,7 +319,7 @@ if($numCol['cantidad'] >= 1){
   $resultV['contenido'] .= '<div style="width: 100%" class="deep-orange accent-4"><h6 class="center-align" style="padding-top: 5px; padding-bottom: 5px; color: white;">No se encotro resultado !</h6></div>';
 }
 
-echo json_encode($resultV);
+echo json_encode($resultV, JSON_HEX_TAG | JSON_HEX_APOS | JSON_HEX_QUOT | JSON_HEX_AMP | JSON_UNESCAPED_UNICODE);
 
 $objBDSQL->cerrarBD();
 $objBDSQL2->cerrarBD();
