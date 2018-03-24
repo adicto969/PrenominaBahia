@@ -1,5 +1,6 @@
 $(document).ready(function(){
 	Permisos();
+	$( ".datePickert" ).datepicker();
 });
 
 function cambiarPeriodo() {
@@ -16,7 +17,7 @@ function cambiarPeriodo() {
 
           	} else {
 
-	            var fechaJSON = JSON.parse(conexion.responseText);
+	            var fechaJSON = JSON.parse(conexion.responseText.replace(/\ufeff/g, ''));
 
 	            document.getElementById('fchI').value = fechaJSON.fecha1;
 	            document.getElementById('fchF').value = fechaJSON.fecha2;
@@ -95,7 +96,7 @@ function GenerarPermiso() {
 				conexion.onreadystatechange = function(){
 					if(conexion.readyState == 4 && conexion.status == 200){
 						try {
-							var jsonDatos = JSON.parse(conexion.responseText);
+							var jsonDatos = JSON.parse(conexion.responseText.replace(/\ufeff/g, ''));
 							if(jsonDatos.error == 0){
 								if(jsonDatos.codigoError == ""){
 									Materialize.toast('DATO ACTUALIZADO!', 5000);
@@ -275,16 +276,31 @@ function botonArriba() {
 		url: 'ajax.php?modo=AutCompletado',
 		type: 'POST',
 		data: 'codigo='+valor+'&Tn='+Tn
-	}).done(function(respuesta){
-		console.log(respuesta);
+	}).done(function(respuesta){		
 		$("#ULAuto").html(respuesta);
+	});
+}
+
+function botonArribaM() {
+	var valor, Tn;
+	valor = $("#codigo").val();
+	Tn = $("#tiponom").val();
+
+	$.ajax({
+		url: 'ajax.php?modo=AutCompletado',
+		type: 'POST',
+		data: 'codigo='+valor+'&Tn='+Tn
+	}).done(function(respuesta){		
+		$("#codigosOp").html(respuesta);
 	});
 }
 
 function agregartap(ID) {
 	//$("#cod").val('');
 	$("#cod").val(ID);
+	$("#codigo").val(ID);
 	$("#ULAuto").html('');
+	$("#codigosOp").html('');
 }
 
 
@@ -320,3 +336,64 @@ function eliminarCo(codigo){
     });
   };
 }
+
+function Amultiple(){
+	$('#fchIM').val($('#fchI').val());
+	$('#fchFM').val($('#fchF').val());
+	$("#modalMultiple").modal('open');
+}
+
+function multiple() {
+	var fechaIni = $('#fchIM').val();
+	var fechaFin = $('#fchFM').val();
+	var codigo = $("#codigo").val();
+	var valor = $("#valor").val();
+	var empresa = $("#IDEmpConfig").val();
+	var tn = $("#tiponom").val();
+
+	if(fechaFin == "" || fechaIni == ""){
+		if(fechaFin == ""){			
+			$('#fchFM').focus();
+		}
+		if(fechaIni == ""){
+			$('#fchIM').focus();
+		}		
+		Materialize.toast('Se requieren ambas fechas', 5000);
+		return false;
+	}
+
+	if(codigo == ""){
+		$('#codigo').focus();
+		Materialize.toast('Se requieren codigo de empleado', 5000);
+		return false;
+	}
+
+	if(valor == ""){
+		$('#valor').focus();
+		Materialize.toast('Se requieren el valor', 5000);
+		return false;
+	}
+
+	$('#result').html("<h3 class='center'>Procesando...</h3>");
+
+	$.ajax({
+		method: 'POST',
+		url: 'ajax.php?modo=GPermiso',
+		data: 'pruebaMul=0&fechaIni='+fechaIni+'&fechaFin='+fechaFin+'&codigo='+codigo+'&valor='+valor+'&IDEmpresa='+empresa+'&tnomina='+tn
+	}).done(function(data){		
+		try
+		{
+			var result = JSON.parse(data.replace(/\ufeff/g, ''));
+			if(result.status == "OK")
+			{
+				$('#result').html("<h3 class='light-green accent-4 center'>"+result.mensaje+"</h3>");
+			}else {
+				$('#result').html("<h3 class='red darken-3 center'>"+result.mensaje+"</h3>");
+			}
+		}catch(error){
+			$('#result').html("<h3 class='red darken-3 center'>Error General</h3>");	
+		}
+
+	});
+}
+

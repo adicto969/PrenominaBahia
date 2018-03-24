@@ -68,7 +68,7 @@ if($TN == 1 || $PC > 24)
 
 
 ?>
-<h4 style="text-align: center;"><?php echo $NomDep; ?></h4>
+<h4 style="text-align: center;"><?php echo utf8_encode($NomDep); ?></h4>
 <h5 style="text-align: center;">PERMISOS</h5>
 <div class="row">
   	<div id="DperC" class="col s12 m6 offset-m3 l4">
@@ -95,6 +95,7 @@ if($TN == 1 || $PC > 24)
 	            <input id="tiponom" type="number" min="1" max="6" name="tiponom" value="<?php echo $TN; ?>" style="margin-left: 50px; width: 142px; font-size: 1rem; height: 1.5rem;">
 	            <br/>
 	            <div class="boton col s12 center-align" style="margin-top: 50px; margin-bottom: 50px;">
+					<button class="btn" onclick="Amultiple()">Multiple</button> 
 	                <input class="btn" type="submit" value="BUSCAR" onclick="Permisos()" id="btnT"/>
 	            </div>
 	            <br/>
@@ -157,6 +158,36 @@ if($TN == 1 || $PC > 24)
       echo $error;
   }
   ?>
+</div>
+
+<div class="modal" id="modalMultiple" >
+	<div class="row">
+  		<div class="col s12" id="codigosOp">
+		
+		</div>
+		<div class="input-field col s12 m6 offset-m3">
+			<label>Codigo</label>
+			<input type="text" id="codigo" name="codigo" onkeyup="botonArribaM()" style="background-color: white;width: 100%;">
+		</div>
+		<div class="input-field col s12 m6 offset-m3">
+			<label>Valor</label>
+			<input type="text" id="valor" name="valor" style="background-color: white;width: 100%;">
+		</div>
+		<div class="input-field col s12 m6 offset-m3">
+			<label for="fchIM">Fecha Inicial</label>
+			<input id="fchIM" class="datePickert" type="text" value="<?php echo $fecha1; ?>" style="background-color: white;width: 100%;">
+		</div>
+		<div class="input-field col s12 m6 offset-m3">
+			<label for="fchFM">Fecha Final</label>
+			<input id="fchFM" class="datePickert" type="text" value="<?php echo $fecha2; ?>" style="background-color: white;width: 100%;">
+		</div>
+  		<div class="input-field col s12 m6 offset-m3">
+		  	<a class="btn" onclick="multiple()" >Prueba</a>
+		</div>
+		<div class="input-field col s12 m6 offset-m3">
+			<texarea id="result"></texarea>
+		</div>			
+	</div>
 </div>
 
 <?php if(empty($error)) {?>

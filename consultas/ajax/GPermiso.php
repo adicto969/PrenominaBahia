@@ -1,7 +1,149 @@
 <?php
-
 $objBDSQL = new ConexionSRV();
 $objBDSQL->conectarBD();
+
+if(isset($_POST['pruebaMul'])){
+  $result = new stdClass();
+  $result->status = "OK";
+  $result->mensaje = "Registros Insertados";
+
+  $verifiFecha = 0;
+  $periodoInicial = 1;
+  $tnInicial = $_POST['tnomina'];
+  $valor = $_POST['valor'];
+  $idEmpresa = $_POST['IDEmpresa'];
+  $fechaPeticionI = explode("/", $_POST["fechaIni"])[2]."/".explode("/", $_POST["fechaIni"])[1]."/".explode("/", $_POST["fechaIni"])[0];//"2018/12/28";
+  $fechaPeticionF = explode("/", $_POST["fechaFin"])[2]."/".explode("/", $_POST["fechaFin"])[1]."/".explode("/", $_POST["fechaFin"])[0];
+  $contador = 0;
+  $codigo = $_POST["codigo"];  
+  $denuevo = 0;
+  if($DepOsub == 1)
+  {
+    $ComSql = "LEFT (L.centro, ".$MascaraEm.") = LEFT ('".$centro."', ".$MascaraEm.")";
+  }else {
+    $ComSql = "L.centro = '".$centro."'";
+  }
+
+  $verificarCodigo = "SELECT E.codigo FROM empleados AS E 
+                      INNER JOIN Llaves AS L ON L.codigo = E.codigo AND L.empresa = E.empresa
+                      WHERE E.empresa = $idEmpresa 
+                      AND E.codigo = $codigo 
+                      AND E.activo = 'S' 
+                      AND L.tiponom = $tnInicial
+                      AND $ComSql";
+
+  $resultQuery = $objBDSQL->consultaBD($verificarCodigo);
+  if($resultQuery['error'] == 1)
+  {
+    $file = fopen("log/log".date("d-m-Y").".txt", "a");
+    fwrite($file, ":::::::::::::::::::::::ERROR SQL:::::::::::::::::::::::".PHP_EOL);
+    fwrite($file, '['.date('d/m/Y h:i:s A').']'.' - '.$resultQuery['SQLSTATE'].PHP_EOL);
+    fwrite($file, '['.date('d/m/Y h:i:s A').']'.' - '.$resultQuery['CODIGO'].PHP_EOL);
+    fwrite($file, '['.date('d/m/Y h:i:s A').']'.' - '.$resultQuery['MENSAJE'].PHP_EOL);
+    fwrite($file, '['.date('d/m/Y h:i:s A').']'.' - CONSULTA: '.$verificarCodigo.PHP_EOL);
+    fclose($file);
+    $result->status = "error";
+    $result->mensaje = "Error al verificar usuario";
+    exit();
+  }
+
+  $datos = $objBDSQL->obtenResult();
+  $objBDSQL->liberarC();
+  if(empty($datos['codigo']))
+  {
+    $result->status = "error";
+    $result->mensaje = "El empleado $codigo no exite con los datos ingresados";
+    exit();
+  }
+
+  do{
+    $_fechas = periodo($periodoInicial, $tnInicial);
+    list($fecha1, $fecha2, $fecha3, $fecha4) = explode(',', $_fechas);    
+    $fecha3 = explode("/", $fecha3)[2]."/".explode("/", $fecha3)[1]."/".explode("/", $fecha3)[0];
+    $fecha2 = explode("/", $fecha2)[2]."/".explode("/", $fecha2)[1]."/".explode("/", $fecha2)[0];
+    $fecha1 = explode("/", $fecha1)[2]."/".explode("/", $fecha1)[1]."/".explode("/", $fecha1)[0];
+      
+    if($denuevo == 1){
+      if($periodoInicial == 1){
+        $ayo = (int)explode("/", $fecha1)[0]+1;
+        $ayo1 = (int)explode("/", $fecha1)[0]+2;
+        $fecha1 = $ayo."/".explode("/", $fecha1)[1]."/".explode("/", $fecha1)[2];
+        $fecha2 = $ayo1."/".explode("/", $fecha2)[1]."/".explode("/", $fecha2)[2];
+        $fecha3 = $ayo1."/".explode("/", $fecha3)[1]."/".explode("/", $fecha3)[2];
+      }else {
+        $ayo = (int)explode("/", $fecha1)[0]+1;     
+        $fecha1 = $ayo."/".explode("/", $fecha1)[1]."/".explode("/", $fecha1)[2];
+        $fecha2 = $ayo."/".explode("/", $fecha2)[1]."/".explode("/", $fecha2)[2];
+        $fecha3 = $ayo."/".explode("/", $fecha3)[1]."/".explode("/", $fecha3)[2];
+      }
+      
+    }    
+    $fechaC = $fecha1;
+    $fechaC3 = $fecha3;
+    for($i = 0; $fecha1 < $fecha2; $i++){                  
+      $fecha1 = date("Y/m/d", strtotime($fechaC." +".$i." day"));
+      $fecha3 = date("Y/m/d", strtotime($fechaC3." +".$i." day"));
+      if($fecha1 <= $fechaPeticionF && $fecha1 >= $fechaPeticionI){        
+        $f1Insert = explode("/", $fecha1)[2]."-".explode("/", $fecha1)[1]."-".explode("/", $fecha1)[0];
+        $f2Insert = explode("/", $fecha3)[2]."/".explode("/", $fecha3)[1]."/".explode("/", $fecha3)[0];
+        $queryVr = "SELECT codigo FROM datosanti WHERE codigo = $codigo AND nombre = '$f1Insert' AND fechaO = '$f2Insert' AND periodoP = $periodoInicial AND tipoN = $tnInicial AND IDEmpresa = $idEmpresa AND Centro = '$centro'";
+        $resultVQuery = $objBDSQL->consultaBD($queryVr);
+        if($resultVQuery['error'] == 1)
+        {
+          $file = fopen("log/log".date("d-m-Y").".txt", "a");
+          fwrite($file, ":::::::::::::::::::::::ERROR SQL:::::::::::::::::::::::".PHP_EOL);
+          fwrite($file, '['.date('d/m/Y h:i:s A').']'.' - '.$resultVQuery['SQLSTATE'].PHP_EOL);
+          fwrite($file, '['.date('d/m/Y h:i:s A').']'.' - '.$resultVQuery['CODIGO'].PHP_EOL);
+          fwrite($file, '['.date('d/m/Y h:i:s A').']'.' - '.$resultVQuery['MENSAJE'].PHP_EOL);
+          fwrite($file, '['.date('d/m/Y h:i:s A').']'.' - CONSULTA: '.$queryVr.PHP_EOL);
+          fclose($file);          
+        }else {
+          $datosVr = $objBDSQL->obtenResult();
+          $objBDSQL->liberarC();
+          if(empty($datosVr['codigo']))
+          {
+            $query = "INSERT INTO datosanti VALUES ($codigo, '".$f1Insert."', '".$f2Insert."', '$valor', $periodoInicial, $tnInicial, $idEmpresa, '$centro', 0, 0, 0)";        
+            $_resultados = $objBDSQL->consultaBD($query);
+            if($_resultados['error'] == 1)
+            {
+              $file = fopen("log/log".date("d-m-Y").".txt", "a");
+              fwrite($file, ":::::::::::::::::::::::ERROR SQL:::::::::::::::::::::::".PHP_EOL);
+              fwrite($file, '['.date('d/m/Y h:i:s A').']'.' - '.$_resultados['SQLSTATE'].PHP_EOL);
+              fwrite($file, '['.date('d/m/Y h:i:s A').']'.' - '.$_resultados['CODIGO'].PHP_EOL);
+              fwrite($file, '['.date('d/m/Y h:i:s A').']'.' - '.$_resultados['MENSAJE'].PHP_EOL);
+              fwrite($file, '['.date('d/m/Y h:i:s A').']'.' - CONSULTA: '.$query.PHP_EOL);
+              fclose($file);
+            }
+          }else {
+            $query = "UPDATE datosanti SET valor = '$valor' WHERE codigo = $codigo AND nombre = '$f1Insert' AND fechaO = '$f2Insert' AND periodoP = $periodoInicial AND tipoN = $tnInicial AND IDEmpresa = $idEmpresa AND Centro = '$centro'";
+            $_resultados = $objBDSQL->consultaBD($query);
+            if($_resultados['error'] == 1)
+            {
+              $file = fopen("log/log".date("d-m-Y").".txt", "a");
+              fwrite($file, ":::::::::::::::::::::::ERROR SQL:::::::::::::::::::::::".PHP_EOL);
+              fwrite($file, '['.date('d/m/Y h:i:s A').']'.' - '.$_resultados['SQLSTATE'].PHP_EOL);
+              fwrite($file, '['.date('d/m/Y h:i:s A').']'.' - '.$_resultados['CODIGO'].PHP_EOL);
+              fwrite($file, '['.date('d/m/Y h:i:s A').']'.' - '.$_resultados['MENSAJE'].PHP_EOL);
+              fwrite($file, '['.date('d/m/Y h:i:s A').']'.' - CONSULTA: '.$query.PHP_EOL);
+              fclose($file);
+            }
+          }          
+        }        
+      }
+      
+    }
+    
+    if($periodoInicial == 24){
+      $periodoInicial = 1;      
+      $denuevo = 1;
+    }else {
+      $periodoInicial++;
+    }
+    $contador++;
+  }while( $fecha1 <= $fechaPeticionF);
+  echo json_encode($result, JSON_FORCE_OBJECT);
+  exit();
+}
 
 $Periodo = $_POST["periodo"];
 $Tn = $_POST["TN"];
@@ -245,4 +387,6 @@ if(empty($codigoConfirm['codigo'])){
 }
 echo json_encode($resultV);
 $objBDSQL->cerrarBD();
+
+
 ?>
