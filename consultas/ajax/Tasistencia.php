@@ -320,6 +320,7 @@ if($DepOsub == 1)
   '".$ordernar."'";
   $ComSql = "Centro = '".$centro."'";
 }
+//echo $queryGeneral;
 /////////////Periodo y TipoNomina/////////
 $_UPDATEPYT = "UPDATE config SET PC = $_periodo, TN = $_tipoNom WHERE IDUser = '".$_SESSION['IDUser']."';";
 try{
@@ -604,23 +605,23 @@ while ($row=$objBDSQL->obtenResult()) {
             if($_colorF == 1){
                 $_cuerpo .= '<input type="text" name="fecha'.$row['codigo'].$_FechaCol.'[]" '.$bloquear.' style="background-color: #f57c7c;" id="'.$row['codigo'].$_FechaCol.'" value="'.$_valorC.'" onkeyup="GuardarTR('.$row['codigo'].', \''.$_FechaCol.'\', \''.date("d/m/Y", strtotime($fechAumen." + ".$sumaDias." day")).'\')" >';
             }else {
-               if(empty($_valorC)){
-                $_cuerpo .= '<input type="text" name="fecha'.$row['codigo'].$_FechaCol.'[]" '.$bloquear.' id="'.$row['codigo'].$_FechaCol.'" value="D" onkeyup="GuardarTR('.$row['codigo'].', \''.$_FechaCol.'\', \''.date("d/m/Y", strtotime($fechAumen." + ".$sumaDias." day")).'\')" >';                
-                $scriptCargar .= 'GuardarTR('.$row['codigo'].', \''.$_FechaCol.'\', \''.date("d/m/Y", strtotime($fechAumen." + ".$sumaDias." day")).'\');';
-               }else {
+               //if(empty($_valorC)){
+                //$_cuerpo .= '<input type="text" name="fecha'.$row['codigo'].$_FechaCol.'[]" '.$bloquear.' id="'.$row['codigo'].$_FechaCol.'" value="D" onkeyup="GuardarTR('.$row['codigo'].', \''.$_FechaCol.'\', \''.date("d/m/Y", strtotime($fechAumen." + ".$sumaDias." day")).'\')" >';                
+                //$scriptCargar .= 'GuardarTR('.$row['codigo'].', \''.$_FechaCol.'\', \''.date("d/m/Y", strtotime($fechAumen." + ".$sumaDias." day")).'\');';
+               //}else {
                 $_cuerpo .= '<input type="text" name="fecha'.$row['codigo'].$_FechaCol.'[]" '.$bloquear.' id="'.$row['codigo'].$_FechaCol.'" value="'.$_valorC.'" onkeyup="GuardarTR('.$row['codigo'].', \''.$_FechaCol.'\', \''.date("d/m/Y", strtotime($fechAumen." + ".$sumaDias." day")).'\')" >';                
-               }                              
+               //}                              
             }
           }else {
             if($_colorF == 1){
                 $_cuerpo .= '<input type="text" name="fecha'.$row['codigo'].$_FechaCol.'[]" '.$bloquear.' style="background-color: #f57c7c;" id="'.$row['codigo'].$_FechaCol.'" value="'.$_valorC.'" onkeyup="GuardarTR('.$row['codigo'].', \''.$_FechaCol.'\', \''.date("d/m/Y", strtotime($fechAumen." + ".$sumaDias." day")).'\')" >';
             }else {
-               if(empty($_valorC)){
-                $_cuerpo .= '<input type="text" name="fecha'.$row['codigo'].$_FechaCol.'[]" '.$bloquear.' id="'.$row['codigo'].$_FechaCol.'" value="F" onkeyup="GuardarTR('.$row['codigo'].', \''.$_FechaCol.'\', \''.date("d/m/Y", strtotime($fechAumen." + ".$sumaDias." day")).'\')" >';
-                $scriptCargar .= 'GuardarTR('.$row['codigo'].', \''.$_FechaCol.'\', \''.date("d/m/Y", strtotime($fechAumen." + ".$sumaDias." day")).'\');';
-               }else {
+               //if(empty($_valorC)){
+                //$_cuerpo .= '<input type="text" name="fecha'.$row['codigo'].$_FechaCol.'[]" '.$bloquear.' id="'.$row['codigo'].$_FechaCol.'" value="F" onkeyup="GuardarTR('.$row['codigo'].', \''.$_FechaCol.'\', \''.date("d/m/Y", strtotime($fechAumen." + ".$sumaDias." day")).'\')" >';
+                //$scriptCargar .= 'GuardarTR('.$row['codigo'].', \''.$_FechaCol.'\', \''.date("d/m/Y", strtotime($fechAumen." + ".$sumaDias." day")).'\');';
+               //}else {
                 $_cuerpo .= '<input type="text" name="fecha'.$row['codigo'].$_FechaCol.'[]" '.$bloquear.' id="'.$row['codigo'].$_FechaCol.'" value="'.$_valorC.'" onkeyup="GuardarTR('.$row['codigo'].', \''.$_FechaCol.'\', \''.date("d/m/Y", strtotime($fechAumen." + ".$sumaDias." day")).'\')" >';
-               }                
+               //}                
             }
           }
 

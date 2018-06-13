@@ -17,7 +17,12 @@ if($_SESSION['Permiso'] == 1 || $_SESSION['Sudo'] == 1){
 	echo '		<select class="SelectDep">';
 	echo '			<option value="0v">DEPARTAMENTOS 2018</option>';
 
-	$query = "SELECT LTRIM ( RTRIM ( centro ) ) AS centro, nomdepto FROM centros WHERE empresa = '".$IDEmpresa."' and defindpto2 = ".DepNumOrden." and LEFT(centro, 1) LIKE '7%' ORDER BY nomdepto asc;";
+	//defindpto2 = ".DepNumOrden." and 
+	$query = "SELECT LTRIM ( RTRIM ( centro ) ) AS centro, nomdepto FROM centros WHERE defindpto2 = ".DepNumOrden." and empresa = '".$IDEmpresa."' and LEFT(centro, 1) LIKE '7%' ORDER BY nomdepto asc;";	
+	if($IDEmpresa == 2){
+		$query = "SELECT LTRIM ( RTRIM ( centro ) ) AS centro, nomdepto FROM centros WHERE empresa = '".$IDEmpresa."' and LEFT(centro, 1) LIKE '7%' ORDER BY nomdepto asc;";	
+	}
+	
 	$objBDSQL->consultaBD($query);
 	while($datos = $objBDSQL->obtenResult()) {
 		if($centro == $datos["centro"]){

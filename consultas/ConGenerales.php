@@ -28,6 +28,7 @@ if(isset($_SESSION['IDUser'])){
   }else {
     $error = "NO SE HAN ENCONTRADO DATOS MYSQL(Usuario)";
     echo "<h1 style='text-align:center;'>".$error."<h1>";
+	echo "SELECT IDEmpresa, centro, DB, UserDB, PassDB, PC, TN, PP, PA, POR, correo, server, DoS, FactorA, supervisor, ayo FROM config WHERE IDUser = '".$_SESSION['IDUser']."' LIMIT 1;";
     exit();
   }
 
