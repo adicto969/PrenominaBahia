@@ -1,0 +1,4 @@
+:::::::::::::::::::::::LOGIN:::::::::::::::::::::::
+[30/04/2018 08:35:10 AM] - SE HA LOGEADO EL USUARIO: nombahia
+:::::::::::::::::::::::LOGIN:::::::::::::::::::::::
+[30/04/2018 09:35:48 AM] - SE HA LOGEADO EL USUARIO: nombahia
