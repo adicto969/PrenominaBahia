@@ -560,6 +560,57 @@ while ($row=$objBDSQL->obtenResult()) {
           $objBDSQL2->liberarC2();
         }
 
+
+        $_queryIncapacidades = "SELECT codigo FROM relch_registro where codigo = '".$row['codigo']."' and fecha = '".$_FechaPar."' and num_conc IN (109,110,111);";
+        $_queryVacaciones = "SELECT codigo FROM relch_registro where codigo = '".$row['codigo']."' and fecha = '".$_FechaPar."' and num_conc = 30;";
+
+
+        $incapacidadesQuery = '';
+        $vacacionesQuery = '';
+        if(empty($row[$value])){
+          $consultaIncapacidades = $objBDSQL2->consultaBD2($_queryIncapacidades);
+          if($consultaIncapacidades['error'] == 1){
+            $file = fopen("log/log".date("d-m-Y").".txt", "a");
+            fwrite($file, ":::::::::::::::::::::::ERROR SQL:::::::::::::::::::::::".PHP_EOL);
+            fwrite($file, '['.date('d/m/Y h:i:s A').']'.' - '.$consultaIncapacidades['SQLSTATE'].PHP_EOL);
+            fwrite($file, '['.date('d/m/Y h:i:s A').']'.' - '.$consultaIncapacidades['CODIGO'].PHP_EOL);
+            fwrite($file, '['.date('d/m/Y h:i:s A').']'.' - '.$consultaIncapacidades['MENSAJE'].PHP_EOL);
+            fwrite($file, '['.date('d/m/Y h:i:s A').']'.' - CONSULTA: '.$_queryIncapacidades.PHP_EOL);
+            fclose($file);
+            $resultV['error'] = 1;
+            echo json_encode($resultV);
+            /////////////////////////////
+            $objBDSQL->cerrarBD();
+            $objBDSQL2->cerrarBD();
+
+            exit();
+          }
+
+          $incapacidadesQuery = $objBDSQL2->obtenResult2();
+          $objBDSQL2->liberarC2();
+
+          $consultaVacaciones = $objBDSQL2->consultaBD2($_queryVacaciones);
+          if($consultaVacaciones['error'] == 1){
+            $file = fopen("log/log".date("d-m-Y").".txt", "a");
+            fwrite($file, ":::::::::::::::::::::::ERROR SQL:::::::::::::::::::::::".PHP_EOL);
+            fwrite($file, '['.date('d/m/Y h:i:s A').']'.' - '.$consultaVacaciones['SQLSTATE'].PHP_EOL);
+            fwrite($file, '['.date('d/m/Y h:i:s A').']'.' - '.$consultaVacaciones['CODIGO'].PHP_EOL);
+            fwrite($file, '['.date('d/m/Y h:i:s A').']'.' - '.$consultaVacaciones['MENSAJE'].PHP_EOL);
+            fwrite($file, '['.date('d/m/Y h:i:s A').']'.' - CONSULTA: '.$_queryVacaciones.PHP_EOL);
+            fclose($file);
+            $resultV['error'] = 1;
+            echo json_encode($resultV);
+            /////////////////////////////
+            $objBDSQL->cerrarBD();
+            $objBDSQL2->cerrarBD();
+
+            exit();
+          }
+
+          $vacacionesQuery = $objBDSQL2->obtenResult2();
+          $objBDSQL2->liberarC2();
+        }        
+
         ##################################################
         //VERIFICAR LOS DATOS EN LAS TABLAS EXTRAS
         ##################################################
@@ -594,6 +645,15 @@ while ($row=$objBDSQL->obtenResult()) {
 
         if(!empty($row2['H'])){
           $_PDOM_DLabora = explode('|', $row2['H']);
+        }
+
+        if(empty($_valorC)){
+          if(isset($incapacidadesQuery['codigo'])){            
+            $_valorC = "I";
+          }
+          if(isset($vacacionesQuery['codigo'])){            
+            $_valorC = "V";
+          }          
         }
 
         ##################################################
