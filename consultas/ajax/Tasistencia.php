@@ -320,6 +320,41 @@ if($DepOsub == 1)
   '".$ordernar."'";
   $ComSql = "Centro = '".$centro."'";
 }
+
+$queryInsertIncapacidades = "[dbo].[ObtenRelojIncapacidades] ".$IDEmpresa.",".$_tipoNom.",'',''";
+$queryInsertVacation = "[dbo].[ObtenRelojVacaciones] ".$IDEmpresa.",".$_tipoNom.",'',''";
+/////////////////////////////////////
+
+
+$resultInsertIncap = $objBDSQL->consultaBD($queryInsertIncapacidades);
+
+if($resultInsertIncap['error'] == 1){
+  $file = fopen("log/log".date("d-m-Y").".txt", "a");
+  fwrite($file, ":::::::::::::::::::::::ERROR SQL:::::::::::::::::::::::".PHP_EOL);
+  fwrite($file, '['.date('d/m/Y h:i:s A').']'.' - '.$resultInsertIncap['SQLSTATE'].PHP_EOL);
+  fwrite($file, '['.date('d/m/Y h:i:s A').']'.' - '.$resultInsertIncap['CODIGO'].PHP_EOL);
+  fwrite($file, '['.date('d/m/Y h:i:s A').']'.' - '.$resultInsertIncap['MENSAJE'].PHP_EOL);
+  fwrite($file, '['.date('d/m/Y h:i:s A').']'.' - CONSULTA: '.$queryInsertIncapacidades.PHP_EOL);
+  fclose($file);
+}
+$objBDSQL->liberarC();
+
+$resultInsertVaca = $objBDSQL->consultaBD($queryInsertVacation);
+
+if($resultInsertIncap['error'] == 1){
+  $file = fopen("log/log".date("d-m-Y").".txt", "a");
+  fwrite($file, ":::::::::::::::::::::::ERROR SQL:::::::::::::::::::::::".PHP_EOL);
+  fwrite($file, '['.date('d/m/Y h:i:s A').']'.' - '.$resultInsertVaca['SQLSTATE'].PHP_EOL);
+  fwrite($file, '['.date('d/m/Y h:i:s A').']'.' - '.$resultInsertVaca['CODIGO'].PHP_EOL);
+  fwrite($file, '['.date('d/m/Y h:i:s A').']'.' - '.$resultInsertVaca['MENSAJE'].PHP_EOL);
+  fwrite($file, '['.date('d/m/Y h:i:s A').']'.' - CONSULTA: '.$queryInsertVacation.PHP_EOL);
+  fclose($file);
+}
+$objBDSQL->liberarC();
+
+
+////////////////////////////////////
+
 //echo $queryGeneral;
 /////////////Periodo y TipoNomina/////////
 $_UPDATEPYT = "UPDATE config SET PC = $_periodo, TN = $_tipoNom WHERE IDUser = '".$_SESSION['IDUser']."';";
