@@ -321,12 +321,25 @@ if($DepOsub == 1)
   $ComSql = "Centro = '".$centro."'";
 }
 
-$queryInsertIncapacidades = "[dbo].[ObtenRelojIncapacidades] ".$IDEmpresa.",".$_tipoNom.",'',''";
-$queryInsertVacation = "[dbo].[ObtenRelojVacaciones] ".$IDEmpresa.",".$_tipoNom.",'',''";
+$queryInsertIncapacidades = "dbo.CargarIncapacidades '".$IDEmpresa."','".$_tipoNom."', '', ''";
+$queryInsertVacation = "dbo.CargarVacaciones '".$IDEmpresa."','".$_tipoNom."', '', ''";
 /////////////////////////////////////
+/*$call = "{call dbo.ObtenRelojVacaciones2(?, ?)}";
+$params = array(
+            array($IDEmpresa),
+            array($_tipoNom)            
+          );
+$query = sqlsrv_query($objBDSQL2->conectionReturn(), $call, $params);
 
+if( $query === false )  
+{  
+     echo "Error in executing statement 3.\n";  
+     die( print_r( sqlsrv_errors(), true));  
+}  
+$query = sqlsrv_fetch_array($query, SQLSRV_FETCH_ASSOC);
+print_r($query);*/
 
-$resultInsertIncap = $objBDSQL->consultaBD($queryInsertIncapacidades);
+$resultInsertIncap = $objBDSQL2->consultaBD($queryInsertIncapacidades);
 
 if($resultInsertIncap['error'] == 1){
   $file = fopen("log/log".date("d-m-Y").".txt", "a");
@@ -337,9 +350,9 @@ if($resultInsertIncap['error'] == 1){
   fwrite($file, '['.date('d/m/Y h:i:s A').']'.' - CONSULTA: '.$queryInsertIncapacidades.PHP_EOL);
   fclose($file);
 }
-$objBDSQL->liberarC();
+$objBDSQL2->liberarC();
 
-$resultInsertVaca = $objBDSQL->consultaBD($queryInsertVacation);
+$resultInsertVaca = $objBDSQL2->consultaBD($queryInsertVacation);
 
 if($resultInsertIncap['error'] == 1){
   $file = fopen("log/log".date("d-m-Y").".txt", "a");
@@ -350,7 +363,7 @@ if($resultInsertIncap['error'] == 1){
   fwrite($file, '['.date('d/m/Y h:i:s A').']'.' - CONSULTA: '.$queryInsertVacation.PHP_EOL);
   fclose($file);
 }
-$objBDSQL->liberarC();
+$objBDSQL2->liberarC();
 
 
 ////////////////////////////////////

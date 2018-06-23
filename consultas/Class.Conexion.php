@@ -79,7 +79,7 @@ class ConexionSRV
    if($this->consulta === false || empty($this->consulta)) {
      $result['error'] = 1;
      if(($errors = sqlsrv_errors()) != null){
-       $result['error'] = 1;
+       $result['error'] = 1;       
        foreach ($errors as $error) {
          $result['SQLSTATE'] = "SQLSTATE: ".$error['SQLSTATE'];
          $result['CODIGO'] = "CODIGO: ".$error['code'];
@@ -177,6 +177,11 @@ class ConexionSRV
  public function cerrarBD()
  {
      sqlsrv_close( $this->enlace );
+ }
+
+ public function conectionReturn()
+ {
+   return $this->enlace;
  }
 
 }

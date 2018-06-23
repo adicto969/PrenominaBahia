@@ -1,0 +1,10 @@
+:::::::::::::::::::::::ERROR SQL:::::::::::::::::::::::
+[20/06/2018 10:52:21 PM] - SQLSTATE: 01000
+[20/06/2018 10:52:21 PM] - CODIGO: 0
+[20/06/2018 10:52:21 PM] - MENSAJE: [Microsoft][ODBC Driver 11 for SQL Server][SQL Server]Feb 28 2018 12:00AM
+[20/06/2018 10:52:21 PM] - CONSULTA: dbo.CargarIncapacidades '1','2', '', ''
+:::::::::::::::::::::::ERROR SQL:::::::::::::::::::::::
+[20/06/2018 10:52:22 PM] - SQLSTATE: 01000
+[20/06/2018 10:52:22 PM] - CODIGO: 0
+[20/06/2018 10:52:22 PM] - MENSAJE: [Microsoft][ODBC Driver 11 for SQL Server][SQL Server]Feb 28 2018 12:00AM
+[20/06/2018 10:52:22 PM] - CONSULTA: dbo.CargarVacaciones '1','2', '', ''

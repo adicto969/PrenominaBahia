@@ -1,0 +1,62 @@
+:::::::::::::::::::::::LOGIN:::::::::::::::::::::::
+[15/06/2018 09:00:09 PM] - SE HA LOGEADO EL USUARIO: sudo
+:::::::::::::::::::::::ERROR SQL:::::::::::::::::::::::
+[15/06/2018 09:00:37 PM] - SQLSTATE: 01000
+[15/06/2018 09:00:37 PM] - CODIGO: 0
+[15/06/2018 09:00:37 PM] - MENSAJE: [Microsoft][ODBC Driver 11 for SQL Server][SQL Server]Feb 28 2018 12:00AM
+[15/06/2018 09:00:37 PM] - CONSULTA: dbo.ObtenRelojIncapacidades 1,2,'',''
+:::::::::::::::::::::::ERROR SQL:::::::::::::::::::::::
+[15/06/2018 09:00:39 PM] - SQLSTATE: 01000
+[15/06/2018 09:00:39 PM] - CODIGO: 0
+[15/06/2018 09:00:39 PM] - MENSAJE: [Microsoft][ODBC Driver 11 for SQL Server][SQL Server]Feb 28 2018 12:00AM
+[15/06/2018 09:00:39 PM] - CONSULTA: dbo.ObtenRelojVacaciones 1,2,'',''
+:::::::::::::::::::::::ERROR SQL:::::::::::::::::::::::
+[15/06/2018 09:03:10 PM] - SQLSTATE: 01000
+[15/06/2018 09:03:10 PM] - CODIGO: 0
+[15/06/2018 09:03:10 PM] - MENSAJE: [Microsoft][ODBC Driver 11 for SQL Server][SQL Server]Feb 28 2018 12:00AM
+[15/06/2018 09:03:10 PM] - CONSULTA: dbo.ObtenRelojIncapacidades '1','2','',''
+:::::::::::::::::::::::ERROR SQL:::::::::::::::::::::::
+[15/06/2018 09:03:14 PM] - SQLSTATE: 01000
+[15/06/2018 09:03:14 PM] - CODIGO: 0
+[15/06/2018 09:03:14 PM] - MENSAJE: [Microsoft][ODBC Driver 11 for SQL Server][SQL Server]Feb 28 2018 12:00AM
+[15/06/2018 09:03:14 PM] - CONSULTA: dbo.ObtenRelojVacaciones '1','2','',''
+:::::::::::::::::::::::ERROR SQL:::::::::::::::::::::::
+[15/06/2018 09:06:17 PM] - SQLSTATE: 01000
+[15/06/2018 09:06:17 PM] - CODIGO: 0
+[15/06/2018 09:06:17 PM] - MENSAJE: [Microsoft][ODBC Driver 11 for SQL Server][SQL Server]Feb 28 2018 12:00AM
+[15/06/2018 09:06:17 PM] - CONSULTA: dbo.ObtenRelojIncapacidades '1','2','',''
+:::::::::::::::::::::::ERROR SQL:::::::::::::::::::::::
+[15/06/2018 09:06:18 PM] - SQLSTATE: 01000
+[15/06/2018 09:06:18 PM] - CODIGO: 0
+[15/06/2018 09:06:18 PM] - MENSAJE: [Microsoft][ODBC Driver 11 for SQL Server][SQL Server]Feb 28 2018 12:00AM
+[15/06/2018 09:06:18 PM] - CONSULTA: dbo.ObtenRelojVacaciones '1','2','',''
+:::::::::::::::::::::::ERROR SQL:::::::::::::::::::::::
+[15/06/2018 09:06:36 PM] - SQLSTATE: 01000
+[15/06/2018 09:06:36 PM] - CODIGO: 0
+[15/06/2018 09:06:36 PM] - MENSAJE: [Microsoft][ODBC Driver 11 for SQL Server][SQL Server]Feb 28 2018 12:00AM
+[15/06/2018 09:06:36 PM] - CONSULTA: dbo.ObtenRelojIncapacidades '1','2','',''
+:::::::::::::::::::::::ERROR SQL:::::::::::::::::::::::
+[15/06/2018 09:06:37 PM] - SQLSTATE: 01000
+[15/06/2018 09:06:37 PM] - CODIGO: 0
+[15/06/2018 09:06:37 PM] - MENSAJE: [Microsoft][ODBC Driver 11 for SQL Server][SQL Server]Feb 28 2018 12:00AM
+[15/06/2018 09:06:37 PM] - CONSULTA: dbo.ObtenRelojVacaciones '1','2','',''
+:::::::::::::::::::::::ERROR SQL:::::::::::::::::::::::
+[15/06/2018 09:20:43 PM] - SQLSTATE: 01000
+[15/06/2018 09:20:43 PM] - CODIGO: 0
+[15/06/2018 09:20:43 PM] - MENSAJE: [Microsoft][ODBC Driver 11 for SQL Server][SQL Server]Feb 28 2018 12:00AM
+[15/06/2018 09:20:43 PM] - CONSULTA: dbo.ObtenRelojIncapacidades '1','2','',''
+:::::::::::::::::::::::ERROR SQL:::::::::::::::::::::::
+[15/06/2018 09:20:48 PM] - SQLSTATE: 01000
+[15/06/2018 09:20:48 PM] - CODIGO: 0
+[15/06/2018 09:20:48 PM] - MENSAJE: [Microsoft][ODBC Driver 11 for SQL Server][SQL Server]Feb 28 2018 12:00AM
+[15/06/2018 09:20:48 PM] - CONSULTA: dbo.ObtenRelojVacaciones '1','2','',''
+:::::::::::::::::::::::ERROR SQL:::::::::::::::::::::::
+[15/06/2018 09:23:59 PM] - SQLSTATE: 01000
+[15/06/2018 09:23:59 PM] - CODIGO: 0
+[15/06/2018 09:23:59 PM] - MENSAJE: [Microsoft][ODBC Driver 11 for SQL Server][SQL Server]Feb 28 2018 12:00AM
+[15/06/2018 09:23:59 PM] - CONSULTA: dbo.ObtenRelojIncapacidades '1','2','',''
+:::::::::::::::::::::::ERROR SQL:::::::::::::::::::::::
+[15/06/2018 09:23:59 PM] - SQLSTATE: 01000
+[15/06/2018 09:23:59 PM] - CODIGO: 0
+[15/06/2018 09:23:59 PM] - MENSAJE: [Microsoft][ODBC Driver 11 for SQL Server][SQL Server]Feb 28 2018 12:00AM
+[15/06/2018 09:23:59 PM] - CONSULTA: dbo.ObtenRelojVacaciones '1','2','',''
